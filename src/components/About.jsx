@@ -42,12 +42,12 @@ const AboutContact = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r  from-gray-200 via-slate-400 to-gray-500 p-6 flex flex-wrap lg:flex-nowrap min-h-screen md:mt-10 lg:mt-20 2xl:mt-20 items-start">
+    <div className=" p-6 flex flex-wrap lg:flex-nowrap min-h-screen md:mt-10 lg:mt-20 2xl:mt-20 items-start">
       {/* Image and Bio */}
       <div className="lg:w-1/2 flex flex-col justify-start pr-8">
         {/* Images Section */}
         <div className="flex items-center px-4 lg:px-8">
-          {/* Static Image */}
+          {/* Static Profile Image */}
           <div className="relative rounded-lg bg-gradient-to-r from-gray-400 via-blue-900 to-gray-500 group w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
             <img
               alt="Anton Skogsberg"
@@ -64,15 +64,15 @@ const AboutContact = () => {
 
         {/* Description */}
         <div className="px-4 lg:px-8 mt-8">
-          <p className="text-justify text-slate-750 leading-relaxed">
+          <p className="text-justify text-customGreen   leading-relaxed">
             I’m a character animator, soon to graduate from The Animation Workshop in Denmark. One of Europe’s top schools for animation and visual arts. I love creating characters that feel alive, tell meaningful stories through movement, and leave
             a lasting impression.
           </p>
-          <p className="text-justify text-slate-750 leading-relaxed mt-6">
+          <p className="text-justify text-customGreen   leading-relaxed mt-6">
             Over the course of my studies, I’ve specialized in 3D character animation, while working on collaborative projects that have sharpened my skills in storytelling, teamwork, and using industry-standard tools such as Maya, Blender, Toon
             Boom, Unreal Engine, and After Effects. I’m always excited to explore new approaches to animation and push creative boundaries to bring engaging characters to life.
           </p>
-          <p className="text-justify text-slate-750 leading-relaxed mt-6">
+          <p className="text-justify text-customGreen   leading-relaxed mt-6">
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
@@ -82,7 +82,7 @@ const AboutContact = () => {
             </Link>{" "}
             and get in touch. I’d love to hear from you!
           </p>
-          <div className="text-justify text-slate-750 leading-relaxed mt-6 flex flex-col md:flex-row md:items-center md:space-x-4">
+          <div className="text-justify text-customGreen   leading-relaxed mt-6 flex flex-col md:flex-row md:items-center md:space-x-4">
             <p className="mb-2 md:mb-0">Follow me on social media for updates on my latest projects and animations:</p>
             {/* Social Media Links */}
 
@@ -132,7 +132,7 @@ const AboutContact = () => {
         id="contact"
         className={`w-full lg:w-1/2 rounded-lg p-6 lg:p-8 mx-auto max-w-lg ${styles.formContainer}`}
       >
-        <h2 className="text-2xl font-customFont mb-4 text-slate-750 text-center lg:text-left">Contact Me</h2>
+        <h2 className="text-2xl font-customFont mb-4 text-orange-950 text-center lg:text-left">Contact Me</h2>
         <form
           className="space-y-4"
           onSubmit={handleSubmit}
@@ -141,7 +141,7 @@ const AboutContact = () => {
           <div>
             <label
               htmlFor="from_name"
-              className="block text-sm font-medium text-slate-750"
+              className="block text-sm font-medium text-orange-950"
             >
               Name
             </label>
@@ -154,14 +154,15 @@ const AboutContact = () => {
               placeholder="Your Name"
               maxLength={80}
             />
-            <p className="text-sm ml-2 text-slate-900">Please enter your name.</p>
+            <p className="text-sm ml-2 text-stone-700">Please enter your name.</p>
           </div>
 
           {/* Email Field */}
           <div>
             <label
               htmlFor="from_email"
-              className="block text-sm font-medium text-slate-750"
+              className="block text-sm font-medium text-orange-950
+              "
             >
               Email
             </label>
@@ -175,14 +176,14 @@ const AboutContact = () => {
               maxLength={40}
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
-            <p className="text-sm ml-2 text-slate-900">Please enter a valid email address.</p>
+            <p className="text-sm ml-2 text-stone-700">Please enter a valid email address.</p>
           </div>
 
           {/* Message Field */}
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-medium text-slate-750"
+              className="block text-sm font-medium text-orange-950"
             >
               Message
             </label>
@@ -199,17 +200,13 @@ const AboutContact = () => {
             ></textarea>
 
             {/* Character counter */}
-            <div className="flex justify-between items-center">
-              {/* Static text */}
-              <p className="text-sm ml-2">Please limit your message to 500 characters.</p>
+            <div className="ml-2">
               {/* Dynamic character count */}
               <p
                 className={`text-sm ${
-                  message.length > maxMessageLength - 20
-                    ? "text-red-300" // Red color when 20 or fewer characters are remaining
-                    : message.length > maxMessageLength * 0.8
-                    ? "text-yellow-300" // Yellow color when over 80% of the limit
-                    : "text-slate-900" // Default color
+                  message.length > maxMessageLength - 30
+                    ? "text-red-800" // Red color when 20 or fewer characters are remaining
+                    : " text-stone-700" // Default color
                 }`}
               >
                 {message.length}/{maxMessageLength}

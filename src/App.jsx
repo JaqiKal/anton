@@ -8,7 +8,7 @@ import Layout from "./components/Layout";
 const App = () => {
   return (
     <Router basename="/anton">
-      <div className="pt-4 pb-4 bg-gradient-to-r from-gray-200 via-slate-400 to-gray-500 ">
+      <div className="relative bg-customDutchWhite ">
         <Routes>
           <Route
             path="/"

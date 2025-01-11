@@ -47,7 +47,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container text-orange-950 mx-auto px-4">
       <h1 className="sr-only">Gallery</h1>
 
       {/* Dropdown Menu */}
@@ -62,7 +62,7 @@ const Gallery = () => {
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="px-4 py-2 bg-gray-100 rounded-lg border border-gray-300 shadow-sm"
+          className="px-4 py-2 bg-customDutchLight rounded-lg border border-orange-800 shadow-sm"
         >
           <option value="all">Show All</option>
           <option value="2D">2D animation</option>
@@ -74,7 +74,7 @@ const Gallery = () => {
       {/* Gallery Grid */}
       {filteredArtworks.length === 0 ? (
         <div className="flex justify-center items-center  mt-32 md:mt-32 lg:mt-52 xl:mt-52 2xl:-scroll-mt-60">
-          <div className="text-center bg-fuchsia-200 p-10 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-customPurpleDark">
+          <div className="text-center bg-orange-300 p-10 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-orange-900">
             <h2 className="text-2xl font-bold ">🚧 Work in Progress!</h2>
             <p className="mt-2">Great things are on the way! Grab a coffee and check back soon. ☕</p>
           </div>

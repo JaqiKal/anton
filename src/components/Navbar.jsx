@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-r   from-gray-200 via-slate-400 to-gray-500  text-customPurple">
+    <nav className="text-customGreen">
       <div className="mx-auto px-2 md:px-6 lg:px-8 xl:px-10 2xl:px-16">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -23,7 +23,7 @@ function Navbar() {
               <img
                 src={logo}
                 alt="Logo"
-                className="h-20 md:h-28 lg:h-28 xl:h-28 2xl:h-32 w-auto transition-transform duration-300 hover:scale-x-110"
+                className="h-20 md:h-28 lg:h-28 xl:h-28 2xl:h-32 w-auto transition-transform duration-300 hover:scale-110"
                 aria-label="Go to homepage via logo"
               />
             </Link>
@@ -31,12 +31,12 @@ function Navbar() {
 
           {/* Links for Large Screens */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            <div className="h-full w-full bg-fuchsia-200 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 lg:px-3 lg:py-2 lg:mt-10 lg:mr-6">
+            <div className="h-full w-full bg-orange-400 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 lg:px-3 lg:py-2 lg:mt-10 lg:mr-6">
               <ul className="flex  space-x-10 lg:px-2  font-customFont lg:text-xl">
                 <li>
                   <Link
                     to="/"
-                    className={`transition-transform duration-500 ease-in-out ${isActive("/") ? "text-fuchsia-800" : "hover:text-fuchsia-800"}`}
+                    className={`transition-transform duration-500 ease-in-out ${isActive("/") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Home navigation link"
                   >
                     <span className="inline-block hover:scale-110">Home</span>
@@ -45,7 +45,7 @@ function Navbar() {
                 <li>
                   <Link
                     to="/work"
-                    className={`transition-transform duration-500 ease-in-out ${isActive("/work") ? "text-fuchsia-800" : "hover:text-fuchsia-800"}`}
+                    className={`transition-transform duration-500 ease-in-out ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Work navigation link"
                   >
                     <span className="inline-block hover:scale-110">Work</span>
@@ -54,7 +54,7 @@ function Navbar() {
                 <li>
                   <Link
                     to="/about"
-                    className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-fuchsia-800" : "hover:text-fuchsia-800"}`}
+                    className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="About navigation link"
                   >
                     <span className="inline-block hover:scale-110">Say Hello!</span>
@@ -72,7 +72,7 @@ function Navbar() {
               aria-label="Toggle navigation"
             >
               <svg
-                className="h-8 w-8  text-customPurpleDark hover:text-fuchsia-800 transition-transform duration-500 ease-in-out"
+                className="h-8 w-8  text-customGreen hover:text-orange-800 transition-transform duration-500 ease-in-out"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -93,11 +93,11 @@ function Navbar() {
       {/* Links for Small Screens */}
 
       <div className={`overflow-hidden lg:hidden transition-all duration-700  ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"}`}>
-        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center bg-fuchsia-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center bg-orange-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
           <li>
             <Link
               to="/"
-              className={`block px-4 pt-3 ${isActive("/") ? "text-fuchsia-800" : "hover:text-fuchsia-800"}`}
+              className={`block px-4 pt-3 ${isActive("/") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
               aria-label="Home navigation link"
             >
@@ -108,7 +108,7 @@ function Navbar() {
           <li>
             <Link
               to="/work"
-              className={`block px-4  ${isActive("/work") ? "text-fuchsia-800" : "hover:text-fuchsia-800"}`}
+              className={`block px-4  ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
             >
               <span className="inline-block hover:scale-110">Work</span>
@@ -117,7 +117,7 @@ function Navbar() {
           <li>
             <Link
               to="/about"
-              className={`block px-4 pb-3  ${isActive("/about") ? "text-fuchsia-800" : "hover:text-fuchsia-800"}`}
+              className={`block px-4 pb-3  ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
             >
               <span className="inline-block hover:scale-110">Say Hello!</span>

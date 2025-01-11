@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <div
-      className="relative h-screen bg-gradient-to-r from-gray-200 via-slate-400 to-gray-500  flex items-start justify-center pt-10 lg:mt-10"
+      className="relative h-screen flex items-start justify-center pt-10 lg:mt-10"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

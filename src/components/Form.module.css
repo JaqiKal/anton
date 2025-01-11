@@ -1,10 +1,10 @@
 .formContainer {
   /* Tailwind-like styles */
-  background: rgba(77, 63, 120, 0.2); /* Equivalent to bg-fuchsia-200 */
+  background: rgb(196, 45, 11, 0.3);
   -webkit-backdrop-filter: blur(4px); /* For Safari support */
   backdrop-filter: blur(4px); /* backdrop-filter */
   opacity: 0.7; /* bg-opacity-10 */
-  box-shadow: inset 4px 4px 8px rgb(77, 63, 120, 0.2), inset 4px 4px 16px rgba(255, 255, 255, 0.3), inset -4px -4px 12px rgb(0, 0, 0, 0.2);
+  box-shadow: inset 4px 4px 8px rgba(154, 52, 18, 0.24), inset -4px -4px 8px rgba(154, 52, 18, 0.2), 4px 4px 12px rgba(0, 0, 0, 0.35);
   border-radius: 20px;
 }
 
@@ -13,4 +13,15 @@
   border: 0.2px solid rgb(77, 63, 120, 0.365);
   box-shadow: inset 6px 6px 12px rgb(77, 63, 120, 0.384), inset -4px -4px 8px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+
+.textInput::placeholder {
+  color: rgba(77, 63, 120, 0.5); /* Soft custom purple */
+  font-size: 0.875rem; /* Matches Tailwind's text-sm */
+  font-style: italic; /* Optional for differentiation */
+  transition: color 0.3s ease; /* Smooth transition for focus */
+}
+
+.textInput:focus::placeholder {
+  color: rgba(77, 63, 120, 0.2); /* Lighter on focus */
 }
