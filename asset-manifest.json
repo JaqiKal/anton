@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/anton/static/css/main.ebb466ca.css",
-    "main.js": "/anton/static/js/main.a6896f3a.js",
+    "main.css": "/anton/static/css/main.d6280123.css",
+    "main.js": "/anton/static/js/main.1292c714.js",
     "static/js/488.9db3aaa7.chunk.js": "/anton/static/js/488.9db3aaa7.chunk.js",
     "static/media/cv-anton-skogsberg.pdf": "/anton/static/media/cv-anton-skogsberg.1d8fdb80e8cc663b2461.pdf",
-    "static/media/logo.webp": "/anton/static/media/logo.70533e81f49a62f1b590.webp",
     "static/media/anton-tini.webp": "/anton/static/media/anton-tini.c82470fa93ba718f81bc.webp",
+    "static/media/logo.webp": "/anton/static/media/logo.728183611fd3926c5f58.webp",
     "index.html": "/anton/index.html",
-    "main.ebb466ca.css.map": "/anton/static/css/main.ebb466ca.css.map",
-    "main.a6896f3a.js.map": "/anton/static/js/main.a6896f3a.js.map",
+    "main.d6280123.css.map": "/anton/static/css/main.d6280123.css.map",
+    "main.1292c714.js.map": "/anton/static/js/main.1292c714.js.map",
     "488.9db3aaa7.chunk.js.map": "/anton/static/js/488.9db3aaa7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebb466ca.css",
-    "static/js/main.a6896f3a.js"
+    "static/css/main.d6280123.css",
+    "static/js/main.1292c714.js"
   ]
 }
