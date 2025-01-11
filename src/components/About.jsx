@@ -48,7 +48,7 @@ const AboutContact = () => {
         {/* Images Section */}
         <div className="flex items-center px-4 lg:px-8">
           {/* Static Profile Image */}
-          <div className="relative rounded-lg bg-gradient-to-r from-gray-400 via-blue-900 to-gray-500 group w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
+          <div className="relative rounded-lg bg-radial-gradient w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
             <img
               alt="Anton Skogsberg"
               src={antonTini}
@@ -76,7 +76,7 @@ const AboutContact = () => {
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
-              className="text-blue-900 hover:text-blue-700 transition-transform duration-300"
+              className="font-bold text-green-900 hover:text-blue-700 transition-transform duration-300"
             >
               my portfolio
             </Link>{" "}
@@ -86,12 +86,12 @@ const AboutContact = () => {
             <p className="mb-2 md:mb-0">Follow me on social media for updates on my latest projects and animations:</p>
             {/* Social Media Links */}
 
-            <div className="flex justify-center space-x-10 p-4 md:p-0 md:space-x-6 rounded-xl bg-fuchsia-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-lg md:bg-transparent md:shadow-none">
+            <div className="flex justify-center space-x-10 p-4 md:p-0 md:space-x-6 rounded-xl bg-orange-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-lg md:bg-transparent md:shadow-none">
               <a
                 href="https://www.instagram.com/atoartworks/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-customPurpleDark hover:text-fuchsia-800 transition duration-300 hover:scale-110"
+                className="text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
                 aria-label="Anton's Instagram profile"
               >
                 <FontAwesomeIcon
@@ -103,7 +103,7 @@ const AboutContact = () => {
                 href="https://www.linkedin.com/in/anton-skogsberg-35701a24b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-customPurpleDark hover:text-fuchsia-800 transition duration-300 hover:scale-110"
+                className="text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
                 aria-label="Anton's LinkedIn profile"
               >
                 <FontAwesomeIcon

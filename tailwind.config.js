@@ -9,6 +9,10 @@ module.exports = {
         lg: '16px',
         xl: '24px',
       },
+    
+        backgroundImage: {
+          'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
+        },
       colors: {
         customPurple: '#4d3f78',
         customPurpleDark: '#2e2548',

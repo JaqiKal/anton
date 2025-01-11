@@ -5,9 +5,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -17,23 +19,26 @@
 .button {
   position: relative;
   display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  background: #2e1065; /* customPurpleDark */
+  background: #c42d0b;
+  /* customPurpleDark */
   border: none;
-  border-radius: 9999px; /* Fully rounded */
+  border-radius: 9999px;
+  /* Fully rounded */
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 20px 20px 40px rgb(77, 63, 120, 0.1), 8px 8px 60px rgb(77, 63, 120, 0.3), inset 4px 4px 8px rgb(77, 63, 120, 0.2), inset 4px 4px 16px rgba(255, 255, 255, 0.3), inset -4px -4px 12px rgb(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25), 30px 30px 60px rgb(196, 45, 11, 0.3), 12px 12px 80px rgba(249, 115, 22, 0.5), inset 4px 4px 16px rgba(253, 192, 107, 0.466), inset -6px -6px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* Hover transform */
 .button:hover {
-  background: #1e40af; /* Darker Tailwind Blue */
+  background: #1e40af;
+  /* Darker Tailwind Blue */
   transform: scale(1.05);
 }
 
@@ -45,7 +50,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #c0392b, #f39c12, #f1c40f, #2ecc71, #3498db, #2980b9, #9b59b6, #8e44ad);
+  background: linear-gradient(45deg, #450a0a, #9a3412, #b45309, #d97706, #c2410c, #c42d0b);
   background-size: 400%;
   z-index: -1;
   border-radius: 9999px;
