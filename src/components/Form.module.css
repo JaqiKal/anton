@@ -1,6 +1,6 @@
 .formContainer {
   /* Tailwind-like styles */
-  background: rgb(196, 45, 11, 0.3);
+  background: rgb(196, 45, 11, 0.28);
   -webkit-backdrop-filter: blur(4px); /* For Safari support */
   backdrop-filter: blur(4px); /* backdrop-filter */
   opacity: 0.7; /* bg-opacity-10 */

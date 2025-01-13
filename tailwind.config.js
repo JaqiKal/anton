@@ -3,13 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backdropBlur: {
-        sm: '4px',
-        md: '8px',
-        lg: '16px',
-        xl: '24px',
-      },
-    
+         
         backgroundImage: {
           'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
         },
@@ -19,9 +13,18 @@ module.exports = {
         customGreen: '#17471E', // coolors Pakistan Green, almost tw-green-950 
         customOrange: '#c42d0b', // coolors Engineering Orange, almost tw-orange-800
         customDutchWhite: '#ede0c0', // coolors Dutch White, almost tw-orange-50
-        customDutchL: '#f9f5eb', // coolors Dutch White, 95% lighter
+        customWhite: '#f9f5eb', // coolors Floral White
+        customOrangeBg:'#efcebf',
       },
 
+  
+      backdropBlur: {
+        sm: '4px',
+        md: '8px',
+        lg: '16px',
+        xl: '24px',
+      },
+   
       fontFamily: {
         customFont: ['Sniglet', 'Roboto', 'sans-serif'],
       },

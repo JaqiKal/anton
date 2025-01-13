@@ -86,25 +86,26 @@ const AboutContact = () => {
             <p className="mb-2 md:mb-0">Follow me on social media for updates on my latest projects and animations:</p>
             {/* Social Media Links */}
 
-            <div className="flex justify-center space-x-10 p-4 md:p-0 md:space-x-6 rounded-xl bg-orange-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-lg md:bg-transparent md:shadow-none">
+            <div className="flex justify-center space-x-10 p-4 md:p-0 md:space-x-6">
               <a
                 href="https://www.instagram.com/atoartworks/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
                 aria-label="Anton's Instagram profile"
+                className="p-2 rounded-xl bg-customOrangeBg bg-clip-padding bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
                   size="xl"
                 />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/anton-skogsberg-35701a24b/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
                 aria-label="Anton's LinkedIn profile"
+                className="p-2 rounded-xl bg-customOrangeBg bg-clip-padding bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
               >
                 <FontAwesomeIcon
                   icon={faLinkedinIn}

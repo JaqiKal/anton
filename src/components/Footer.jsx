@@ -47,9 +47,6 @@ const Footer = () => {
           />
         </a>
       </div>
-
-      {/* Footer Text */}
-      <p className="mt-4">{new Date().getFullYear()}Made by JaqiKal</p>
     </footer>
   );
 };

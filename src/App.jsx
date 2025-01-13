@@ -8,7 +8,7 @@ import Layout from "./components/Layout";
 const App = () => {
   return (
     <Router basename="/anton">
-      <div className="relative bg-customDutchWhite ">
+      <div className="relative bg-customWhite">
         <Routes>
           <Route
             path="/"

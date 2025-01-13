@@ -31,7 +31,7 @@ function Navbar() {
 
           {/* Links for Large Screens */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            <div className="h-full w-full bg-orange-400 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 lg:px-3 lg:py-2 lg:mt-10 lg:mr-6">
+            <div className="h-full w-full bg-customOrangeBg rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 lg:px-3 lg:py-2 lg:mt-10 lg:mr-6">
               <ul className="flex  space-x-10 lg:px-2  font-customFont lg:text-xl">
                 <li>
                   <Link
@@ -93,7 +93,7 @@ function Navbar() {
       {/* Links for Small Screens */}
 
       <div className={`overflow-hidden lg:hidden transition-all duration-700  ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"}`}>
-        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center bg-orange-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center  bg-customOrangeBg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
           <li>
             <Link
               to="/"
