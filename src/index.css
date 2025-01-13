@@ -4,6 +4,15 @@
 @tailwind utilities;
 
 /* Custom styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Open Sans", Arial, sans-serif;
