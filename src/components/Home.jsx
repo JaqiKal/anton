@@ -41,12 +41,16 @@ const Home = () => {
 
   return (
     <div
-      className="relative h-screen flex items-start justify-center pt-10 lg:mt-10"
+      className="relative flex items-start sm:items-start lg:items-center justify-center pt-10 sm:pt-5 lg:mt-10 h-screen"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Video */}
-      <div className="relative w-11/12 h-5/6 mx-auto shadow-lg rounded-lg overflow-hidden">
+      {/* Video Container */}
+      <div
+        className={`relative shadow-lg rounded-lg overflow-hidden mx-auto 
+          w-full sm:w-11/12 lg:w-11/12 
+          sm:aspect-[16/9] lg:h-5/6`}
+      >
         <h1 className="hidden">Home page</h1>
         <video
           ref={videoRef}
@@ -54,30 +58,10 @@ const Home = () => {
           muted
           autoPlay
           loop
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain sm:object-contain lg:object-cover"
           aria-label="Anton Skogsberg 3D Showreel, a video showcasing 3D animations and visual effects, infinite loop"
         />
       </div>
-
-      {/* Overlay Content 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-        <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">Anton Skogsberg</h1>
-        <div className="flex justify-center space-x-4">
-          <button
-            onClick={() => navigate("/work")}
-            className="w-28 h-12 bg-blue-800 hover:bg-fuchsia-800 text-lg font-semibold rounded-md shadow-md flex items-center justify-center"
-          >
-            Work
-          </button>
-          <button
-            onClick={() => navigate("/about")}
-            className="w-28 h-12 bg-teal-500 hover:bg-amber-700 text-lg font-semibold rounded-md shadow-md flex items-center justify-center"
-          >
-            Say Hello!
-          </button>
-        </div>
-      </div>
-      */}
     </div>
   );
 };
