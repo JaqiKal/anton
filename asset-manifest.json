@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/anton/static/css/main.a4876b5c.css",
-    "main.js": "/anton/static/js/main.f76b9b8a.js",
+    "main.css": "/anton/static/css/main.09c01ed4.css",
+    "main.js": "/anton/static/js/main.741b81ea.js",
     "reactPlayerYouTube.js": "/anton/static/js/reactPlayerYouTube.457ca831.chunk.js",
     "reactPlayerSoundCloud.js": "/anton/static/js/reactPlayerSoundCloud.dbf0195d.chunk.js",
     "reactPlayerVimeo.js": "/anton/static/js/reactPlayerVimeo.4f789e8c.chunk.js",
@@ -21,8 +21,8 @@
     "static/media/anton-tini.webp": "/anton/static/media/anton-tini.c82470fa93ba718f81bc.webp",
     "static/media/logo.webp": "/anton/static/media/logo.728183611fd3926c5f58.webp",
     "index.html": "/anton/index.html",
-    "main.a4876b5c.css.map": "/anton/static/css/main.a4876b5c.css.map",
-    "main.f76b9b8a.js.map": "/anton/static/js/main.f76b9b8a.js.map",
+    "main.09c01ed4.css.map": "/anton/static/css/main.09c01ed4.css.map",
+    "main.741b81ea.js.map": "/anton/static/js/main.741b81ea.js.map",
     "reactPlayerYouTube.457ca831.chunk.js.map": "/anton/static/js/reactPlayerYouTube.457ca831.chunk.js.map",
     "reactPlayerSoundCloud.dbf0195d.chunk.js.map": "/anton/static/js/reactPlayerSoundCloud.dbf0195d.chunk.js.map",
     "reactPlayerVimeo.4f789e8c.chunk.js.map": "/anton/static/js/reactPlayerVimeo.4f789e8c.chunk.js.map",
@@ -40,7 +40,7 @@
     "488.9db3aaa7.chunk.js.map": "/anton/static/js/488.9db3aaa7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4876b5c.css",
-    "static/js/main.f76b9b8a.js"
+    "static/css/main.09c01ed4.css",
+    "static/js/main.741b81ea.js"
   ]
 }
