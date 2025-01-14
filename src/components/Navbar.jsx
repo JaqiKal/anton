@@ -48,7 +48,7 @@ function Navbar() {
                     className={`transition-transform duration-500 ease-in-out ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Work navigation link"
                   >
-                    <span className="inline-block hover:scale-110">Work</span>
+                    <span className="inline-block hover:scale-110">Showreel</span>
                   </Link>
                 </li>
                 <li>
@@ -111,7 +111,7 @@ function Navbar() {
               className={`block px-4  ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
             >
-              <span className="inline-block hover:scale-110">Work</span>
+              <span className="inline-block hover:scale-110">Showreel</span>
             </Link>
           </li>
           <li>
