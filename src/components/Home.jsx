@@ -1,65 +1,35 @@
-import React, { useEffect, useRef } from "react";
-// import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 const Home = () => {
-  const videoRef = useRef(null);
-  // const navigate = useNavigate();
+  // Track whether the player should be playing
+  const [isPlaying, setIsPlaying] = useState(false);
 
+  // On mount => auto-play, on unmount => pause
   useEffect(() => {
-    const videoElement = videoRef.current;
-
-    // Play video when component mounts
-    if (videoElement && videoElement.readyState >= 2) {
-      videoElement.play().catch((err) => {
-        console.error("Error playing video:", err);
-      });
-    }
-
+    setIsPlaying(true); // Auto-play when the component mounts
     return () => {
-      // Pause video when component unmounts
-      if (videoElement) {
-        videoElement.pause();
-      }
+      setIsPlaying(false); // Pause/stop when unmounting
     };
   }, []);
 
-  const handleMouseEnter = () => {
-    const videoElement = videoRef.current;
-    if (videoElement && videoElement.readyState >= 2) {
-      videoElement.play().catch((err) => {
-        console.error("Error playing video on hover:", err);
-      });
-    }
-  };
-
-  const handleMouseLeave = () => {
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.pause();
-    }
-  };
+  // Keep track of user toggling playback from the player's own controls
+  const handlePlay = () => setIsPlaying(true);
+  const handlePause = () => setIsPlaying(false);
 
   return (
-    <div
-      className="relative flex items-start sm:items-start lg:items-center justify-center pt-10 sm:pt-5 lg:mt-10 h-screen"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Video Container */}
-      <div
-        className={`relative shadow-lg rounded-lg overflow-hidden mx-auto 
-          w-full sm:w-11/12 lg:w-11/12 
-          sm:aspect-[16/9] lg:h-5/6`}
-      >
-        <h1 className="hidden">Home page</h1>
-        <video
-          ref={videoRef}
-          src="https://res.cloudinary.com/dsbcjtatz/video/upload/v1735807083/anton/3D/antonSkogsberg_3DShowreel_v006_lcpenm.mp4"
-          muted
-          autoPlay
-          loop
-          className="w-full h-full object-contain sm:object-contain lg:object-cover"
-          aria-label="Anton Skogsberg 3D Showreel, a video showcasing 3D animations and visual effects, infinite loop"
+    <div className="flex items-center justify-center min-h-[80vh]">
+      <div className="mt-10 sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/3 shadow-lg rounded overflow-hidden">
+        <ReactPlayer
+          url="https://res.cloudinary.com/dsbcjtatz/video/upload/v1735807083/anton/3D/antonSkogsberg_3DShowreel_v006_lcpenm.mp4"
+          playing={isPlaying} // Whether the video should play
+          loop // Continuous loop
+          controls // Native player controls
+          width="100%" // Fill container width
+          height="100%" // Fill container height
+          onPlay={handlePlay} // Update state if user clicks "Play"
+          onPause={handlePause} // Update state if user clicks "Pause"
+          // muted // uncomment if you want it muted by default
         />
       </div>
     </div>

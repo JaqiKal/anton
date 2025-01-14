@@ -42,9 +42,9 @@ const AboutContact = () => {
   };
 
   return (
-    <div className=" p-6 flex flex-wrap lg:flex-nowrap min-h-screen md:mt-10 lg:mt-20 2xl:mt-20 items-start">
+    <div className=" xl:ml-32 xl:mr-20 p-1 flex flex-wrap lg:flex-nowrap min-h-[80vh] items-start mt-8 xl:mt-10 ">
       {/* Image and Bio */}
-      <div className="lg:w-1/2 flex flex-col justify-start pr-8">
+      <div className="lg:w-1/2 flex flex-col justify-start  pr-8">
         {/* Images Section */}
         <div className="flex items-center px-4 lg:px-8">
           {/* Static Profile Image */}
@@ -61,18 +61,19 @@ const AboutContact = () => {
             ></div>
           </div>
         </div>
-
         {/* Description */}
-        <div className="px-4 lg:px-8 mt-8">
-          <p className="text-justify text-customGreen   leading-relaxed">
-            I’m a character animator, soon to graduate from The Animation Workshop in Denmark. One of Europe’s top schools for animation and visual arts. I love creating characters that feel alive, tell meaningful stories through movement, and leave
-            a lasting impression.
+        <div className="px-4 lg:px-8 mt-4">
+          <p className="text-justify text-customGreen   leading-relaxed">Hello and welcome! I’m a 3D & 2D animator educated from The Animation Workshop in Denmark. </p>
+          <p className="text-justify text-customGreen   leading-relaxed mt-4">
+            I have always loved animation growing up, but it wasn’t until I took a leap of faith to move to another country and attempt to enroll into one of the most prestigious animation schools in the world, that I truly learnt what it takes to
+            work in the field as one.
           </p>
-          <p className="text-justify text-customGreen   leading-relaxed mt-6">
-            Over the course of my studies, I’ve specialized in 3D character animation, while working on collaborative projects that have sharpened my skills in storytelling, teamwork, and using industry-standard tools such as Maya, Blender, Toon
-            Boom, Unreal Engine, and After Effects. I’m always excited to explore new approaches to animation and push creative boundaries to bring engaging characters to life.
+          <p className="text-justify text-customGreen   leading-relaxed mt-4">
+            Over the course of my studies I have worked on several large collaborative projects that were set up and treated like professional productions from day one. Thanks to this, I have sharpened my skills in a wide variety of industry standard
+            tools, solutions and programs, such as Maya, Blender, Toon Boom and TVPaint. I’m always excited to pick up something new and work collaboratively with team members to solve solutions, and I’m a fast technical learner. Having worked as a
+            production manager on the side, I am a stickler to schedules and deadlines myself, with my goal to always deliver on time and on quality.
           </p>
-          <p className="text-justify text-customGreen   leading-relaxed mt-6">
+          <p className="text-justify text-customGreen   leading-relaxed mt-4">
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
@@ -82,11 +83,12 @@ const AboutContact = () => {
             </Link>{" "}
             and get in touch. I’d love to hear from you!
           </p>
-          <div className="text-justify text-customGreen   leading-relaxed mt-6 flex flex-col md:flex-row md:items-center md:space-x-4">
-            <p className="mb-2 md:mb-0">Follow me on social media for updates on my latest projects and animations:</p>
+          <div className="text-justify text-customGreen  leading-relaxed  flex flex-col md:flex-row md:items-center md:space-x-4">
+            <p className="text-justify text-customGreen   leading-relaxed mt-4">Follow me on social media for updates on my latest projects and animations:</p>
+
             {/* Social Media Links */}
 
-            <div className="flex justify-center space-x-10 p-4 md:p-0 md:space-x-6">
+            <div className="flex justify-center  space-x-8 p-2 md:p-0 md:space-x-6">
               <a
                 href="https://www.instagram.com/atoartworks/"
                 target="_blank"
@@ -115,9 +117,24 @@ const AboutContact = () => {
             </div>
           </div>
 
+          {/* GitHub Link ) */}
+          <div className="text-justify text-customGreen   leading-relaxed mt-4">
+            Thanks to{" "}
+            <a
+              href="https://github.com/JaqiKal"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to app creators GitHub profile"
+              className="text-customGreen font-bold hover:text-blue-700 transition-transform duration-300"
+            >
+              JaqiKal{" "}
+            </a>
+            for making this app possible!
+          </div>
+
           {/* Download CV */}
           {/* Button design inspired and amended from: https://codepen.io/dhanishgajjar/pen/NgQqVj*/}
-          <div className="flex justify-center space-x-4 mt-8 mb-10 md:mb-10">
+          <div className="flex justify-start space-x-4 mt-2">
             <DownloadButton
               downloadLink={antonCv}
               text="Download My CV"
@@ -131,7 +148,7 @@ const AboutContact = () => {
       {/* Contact Form */}
       <div
         id="contact"
-        className={`w-full lg:w-1/2 rounded-lg p-6 lg:p-8 mx-auto max-w-lg ${styles.formContainer}`}
+        className={`w-full lg:w-1/2 rounded-lg p-6 lg:p-8 mx-auto xl:mt-14 max-w-lg ${styles.formContainer}`}
       >
         <h2 className="text-2xl font-customFont mb-4 text-orange-950 text-center lg:text-left">Contact Me</h2>
         <form

@@ -5,7 +5,7 @@ import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; 
 
 const Footer = () => {
   return (
-    <footer className="text-customDutchWhite text-center text-xs mt-6 md:mt-8 lg:mt-10 xl:mt-12 2xl:mt-14">
+    <footer className="text-center p-1 mt-6">
       {/* Social Media Section */}
       <div className="flex justify-center items-center space-x-6 lg:space-x-12">
         {/* Email Icon */}
@@ -17,7 +17,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faEnvelope}
-            className="w-6 h-6 lg:w-10 lg:h-10"
+            className="w-5 h-5"
           />
         </a>
 
@@ -30,7 +30,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            className="w-6 h-6 lg:w-10 lg:h-10"
+            className="w-5 h-5"
           />
         </a>
 
@@ -43,7 +43,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faLinkedinIn}
-            className="w-6 h-6 lg:w-10 lg:h-10"
+            className="w-5 h-5"
           />
         </a>
       </div>

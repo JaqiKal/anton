@@ -51,7 +51,7 @@ const Gallery = () => {
       <h1 className="sr-only">Gallery</h1>
 
       {/* Dropdown Menu */}
-      <div className="flex justify-end mt-10 mb-8">
+      <div className="flex justify-end mt-10 mb-10  md:mt-5 lg:mt-20 lg:mb-16">
         {/* Label for accessibility */}
         <label
           htmlFor="filterArtworks"
@@ -67,7 +67,6 @@ const Gallery = () => {
           <option value="all">Show All</option>
           <option value="2D">2D animation</option>
           <option value="3D">3D animation</option>
-          <option value="char">Character Design</option>
         </select>
       </div>
 
@@ -80,7 +79,7 @@ const Gallery = () => {
           </div>
         </div>
       ) : (
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
           {filteredArtworks.map((art) => (
             <div
               key={art.id}
@@ -93,7 +92,7 @@ const Gallery = () => {
                 muted
                 loop
                 loading="lazy"
-                className="w-full h-48 object-cover"
+                className="w-full h-48 sm:h-72 md:h-72 lg:h-auto object-cover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 aria-label={`${art.title || "Artwork"}: ${art.description}`}
