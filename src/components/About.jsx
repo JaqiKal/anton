@@ -42,7 +42,7 @@ const AboutContact = () => {
   };
 
   return (
-    <div className=" xl:ml-32 xl:mr-20 p-1 flex flex-wrap lg:flex-nowrap min-h-[80vh] items-start mt-8 xl:mt-10 ">
+    <div className=" xl:ml-32 xl:mr-20 p-1 flex flex-wrap lg:flex-nowrap min-h-[80vh] items-start mt-8 xl:mt-6 ">
       {/* Image and Bio */}
       <div className="lg:w-1/2 flex flex-col justify-start  pr-8">
         {/* Images Section */}
@@ -134,7 +134,7 @@ const AboutContact = () => {
 
           {/* Download CV */}
           {/* Button design inspired and amended from: https://codepen.io/dhanishgajjar/pen/NgQqVj*/}
-          <div className="flex justify-start space-x-4 mt-10 mb-16">
+          <div className="flex justify-start space-x-4 mt-4 mb-8">
             <DownloadButton
               downloadLink={antonCv}
               text="Download My CV"
