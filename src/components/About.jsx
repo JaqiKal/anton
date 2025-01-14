@@ -129,12 +129,12 @@ const AboutContact = () => {
             >
               JaqiKal{" "}
             </a>
-            for making this app possible!
+            for making this web-app possible!
           </div>
 
           {/* Download CV */}
           {/* Button design inspired and amended from: https://codepen.io/dhanishgajjar/pen/NgQqVj*/}
-          <div className="flex justify-start space-x-4 mt-2">
+          <div className="flex justify-start space-x-4 mt-10 mb-16">
             <DownloadButton
               downloadLink={antonCv}
               text="Download My CV"

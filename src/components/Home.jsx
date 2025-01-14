@@ -21,7 +21,7 @@ const Home = () => {
     <div className="flex items-center justify-center min-h-[80vh]">
       <div className="mt-10 sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/3 shadow-lg rounded overflow-hidden">
         <ReactPlayer
-          url="https://res.cloudinary.com/dsbcjtatz/video/upload/v1735807083/anton/3D/antonSkogsberg_3DShowreel_v006_lcpenm.mp4"
+          url="https://res.cloudinary.com/dsbcjtatz/video/upload/v1736877284/anton/home-loop/antonSkogsberg_LoopShowreel_v001_jby0kh.mp4"
           playing={isPlaying} // Whether the video should play
           loop // Continuous loop
           controls // Native player controls
