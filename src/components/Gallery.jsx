@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import image2DThumbnail from "../assets/images/2DThumbnail_v001.webp";
+import image3DThumbnail from "../assets/images/3DThumbnail_v001.webp";
 
 const artworks = [
   {
     id: 1,
     description: "This 2D Animation Showreel is showcasing my skills in everything from cleaned to rough animation. Animations made using TVPaint, Toon Boom Harmony, Photoshop and After Effects.",
-    imageUrl: "https://res.cloudinary.com/dsbcjtatz/image/upload/v1736877445/anton/2D/antonSkogsberg_2DShowreel_v003_pilc19.mp4",
+    imageUrl: image2DThumbnail,
     videoUrl: "https://res.cloudinary.com/dsbcjtatz/video/upload/v1736877445/anton/2D/antonSkogsberg_2DShowreel_v003_pilc19.mp4",
     category: "2D",
   },
@@ -12,7 +14,7 @@ const artworks = [
   {
     id: 2,
     description: "My 3D Animation is showcasing my animation skills in a wide variety of rigs, environments & camera setups. Animations made using Autodesk Maya, with assistance from Blender & Unreal Engin",
-    imageUrl: "https://res.cloudinary.com/dsbcjtatz/image/upload/v1736877493/anton/3D/antonSkogsberg_3DShowreel_v007_yhq1tw.mp4",
+    imageUrl: image3DThumbnail,
     videoUrl: "https://res.cloudinary.com/dsbcjtatz/video/upload/v1736877493/anton/3D/antonSkogsberg_3DShowreel_v007_yhq1tw.mp4",
     category: "3D",
   },
