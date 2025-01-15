@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import image2DThumbnail from "../assets/images/2DThumbnail_v001.webp";
 import image3DThumbnail from "../assets/images/3DThumbnail_v001.webp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const artworks = [
   {
@@ -113,9 +115,13 @@ const Gallery = () => {
           <div className="bg-white rounded-lg p-4 w-11/12 max-w-4xl relative">
             <button
               onClick={closeLightbox}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-0 right-0 w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-800 bg-transparent rounded-full shadow-md transition-transform transform hover:scale-110 z-50"
+              aria-label="Close Lightbox"
             >
-              Close
+              <FontAwesomeIcon
+                icon={faXmark}
+                size="lg"
+              />
             </button>
             <video
               src={selectedArtwork.videoUrl}
