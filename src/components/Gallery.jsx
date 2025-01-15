@@ -39,6 +39,7 @@ const Gallery = () => {
           Filter artworks by category
         </label>
         <select
+          id="filterArtworks"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           className="px-4 py-2 bg-customDutchLight rounded-lg border border-orange-800 shadow-sm"
