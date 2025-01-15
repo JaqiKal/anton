@@ -50,7 +50,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #450a0a, #9a3412, #b45309, #d97706, #c2410c, #c42d0b);
+  background: linear-gradient(45deg, #450a0a, #9a3412, #d97706, #c2410c, #c42d0b);
   background-size: 400%;
   z-index: -1;
   border-radius: 9999px;
@@ -65,7 +65,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, #c0392b, #f39c12, #f1c40f, #2ecc71, #3498db, #2980b9, #9b59b6, #8e44ad);
+  background: linear-gradient(45deg, #b45309, #d97706, #c2410c, #c42d0b);
   background-size: 400%;
   z-index: -2;
   filter: blur(10px);

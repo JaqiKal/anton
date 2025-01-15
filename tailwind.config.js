@@ -12,6 +12,7 @@ module.exports = {
         customPurpleDark: '#2e2548',
         customGreen: '#17471E', // coolors Pakistan Green, almost tw-green-950 
         customOrange: '#c42d0b', // coolors Engineering Orange, almost tw-orange-800
+        customOrangeDark: '#a61b07', 
    
         customWhite: '#f9f5eb', 
         customOrangeBg:'#efcebf',

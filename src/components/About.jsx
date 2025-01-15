@@ -42,13 +42,13 @@ const AboutContact = () => {
   };
 
   return (
-    <div className=" xl:ml-32 xl:mr-20 p-1 flex flex-wrap lg:flex-nowrap min-h-[80vh] items-start mt-8 xl:mt-6 ">
+    <div className=" xl:ml-32  xl:mr-20 p-1 flex flex-wrap lg:flex-nowrap min-h-[80vh] items-start mt-8 xl:mt-5">
       {/* Image and Bio */}
       <div className="lg:w-1/2 flex flex-col justify-start  pr-8">
         {/* Images Section */}
         <div className="flex items-center px-4 lg:px-8">
           {/* Static Profile Image */}
-          <div className="relative rounded-lg bg-radial-gradient w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
+          <div className="relative rounded-md bg-radial-gradient w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
             <img
               alt="Anton Skogsberg"
               src={antonTini}
@@ -63,28 +63,28 @@ const AboutContact = () => {
         </div>
         {/* Description */}
         <div className="px-4 lg:px-8 mt-4">
-          <p className="text-justify text-customGreen   leading-relaxed">Hello and welcome! I’m a 3D & 2D animator educated from The Animation Workshop in Denmark. </p>
-          <p className="text-justify text-customGreen   leading-relaxed mt-4">
+          <p className="text-justify text-neutral-700  leading-relaxed">Hello and welcome! I’m a 3D & 2D animator educated from The Animation Workshop in Denmark. </p>
+          <p className="text-justify  text-neutral-700   leading-relaxed mt-4">
             I have always loved animation growing up, but it wasn’t until I took a leap of faith to move to another country and attempt to enroll into one of the most prestigious animation schools in the world, that I truly learnt what it takes to
             work in the field as one.
           </p>
-          <p className="text-justify text-customGreen   leading-relaxed mt-4">
+          <p className="text-justify  text-neutral-700 leading-relaxed mt-4">
             Over the course of my studies I have worked on several large collaborative projects that were set up and treated like professional productions from day one. Thanks to this, I have sharpened my skills in a wide variety of industry standard
             tools, solutions and programs, such as Maya, Blender, Toon Boom and TVPaint. I’m always excited to pick up something new and work collaboratively with team members to solve solutions, and I’m a fast technical learner. Having worked as a
             production manager on the side, I am a stickler to schedules and deadlines myself, with my goal to always deliver on time and on quality.
           </p>
-          <p className="text-justify text-customGreen   leading-relaxed mt-4">
+          <p className="text-justify  text-neutral-700   leading-relaxed mt-4">
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
-              className="font-bold text-green-900 hover:text-blue-700 transition-transform duration-300"
+              className="font-bold text-customOrange hover:text-blue-700 transition-transform duration-300"
             >
               my portfolio
             </Link>{" "}
             and get in touch. I’d love to hear from you!
           </p>
-          <div className="text-justify text-customGreen  leading-relaxed  flex flex-col md:flex-row md:items-center md:space-x-4">
-            <p className="text-justify text-customGreen   leading-relaxed mt-4">Follow me on social media for updates on my latest projects and animations:</p>
+          <div className="text-justify  text-neutral-700  leading-relaxed  flex flex-col md:flex-row md:items-center md:space-x-4">
+            <p className="text-justify text-neutral-700   leading-relaxed mt-4">Follow me on social media for updates on my latest projects and animations:</p>
 
             {/* Social Media Links */}
 
@@ -94,7 +94,7 @@ const AboutContact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Anton's Instagram profile"
-                className="p-2 rounded-xl bg-customOrangeBg bg-clip-padding bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
+                className="p-2 rounded-md bg-customOrangeBg bg-clip-padding bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
               >
                 <FontAwesomeIcon
                   icon={faInstagram}
@@ -107,7 +107,7 @@ const AboutContact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Anton's LinkedIn profile"
-                className="p-2 rounded-xl bg-customOrangeBg bg-clip-padding bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg text-customGreen hover:text-customOrange transition duration-300 hover:scale-110"
+                className="p-2 rounded-md bg-customOrangeBg bg-clip-padding bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-lg text-customGreen hover:text-customOrangeDark transition duration-300 hover:scale-110"
               >
                 <FontAwesomeIcon
                   icon={faLinkedinIn}
@@ -118,7 +118,7 @@ const AboutContact = () => {
           </div>
 
           {/* GitHub Link ) */}
-          <div className="text-justify text-customGreen   leading-relaxed mt-4">
+          <div className="text-justify text-neutral-700  leading-relaxed mt-4">
             Thanks to{" "}
             <a
               href="https://github.com/JaqiKal"
@@ -134,7 +134,7 @@ const AboutContact = () => {
 
           {/* Download CV */}
           {/* Button design inspired and amended from: https://codepen.io/dhanishgajjar/pen/NgQqVj*/}
-          <div className="flex justify-start space-x-4 mt-4 mb-8">
+          <div className="flex justify-start space-x-4 mt-4">
             <DownloadButton
               downloadLink={antonCv}
               text="Download My CV"
@@ -148,9 +148,9 @@ const AboutContact = () => {
       {/* Contact Form */}
       <div
         id="contact"
-        className={`w-full lg:w-1/2 rounded-lg p-6 lg:p-8 mx-auto xl:mt-14 max-w-lg ${styles.formContainer}`}
+        className={`w-full mt-8 lg:w-1/2 p-6 lg:p-8 mx-auto xl:mt-14 max-w-lg ${styles.formContainer}`}
       >
-        <h2 className="text-2xl font-customFont mb-4 text-orange-950 text-center lg:text-left">Contact Me</h2>
+        <h2 className="text-2xl font-customFont mb-4 text-neutral-950 text-center lg:text-left">Contact Me</h2>
         <form
           className="space-y-4"
           onSubmit={handleSubmit}

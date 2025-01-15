@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import image2DThumbnail from "../assets/images/2DThumbnail_v001.webp";
 import image3DThumbnail from "../assets/images/3DThumbnail_v001.webp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const artworks = [
   {
@@ -15,7 +13,7 @@ const artworks = [
 
   {
     id: 2,
-    description: "My 3D Animation is showcasing my animation skills in a wide variety of rigs, environments & camera setups. Animations made using Autodesk Maya, with assistance from Blender & Unreal Engin",
+    description: "My 3D Animation is showcasing my animation skills in a wide variety of rigs, environments & camera setups. Animations made using Autodesk Maya, with assistance from Blender & Unreal Engin.",
     imageUrl: image3DThumbnail,
     videoUrl: "https://res.cloudinary.com/dsbcjtatz/video/upload/v1736877493/anton/3D/antonSkogsberg_3DShowreel_v007_yhq1tw.mp4",
     category: "3D",
@@ -24,35 +22,12 @@ const artworks = [
 
 const Gallery = () => {
   const [filter, setFilter] = useState("all");
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [selectedArtwork, setSelectedArtwork] = useState(null);
 
   const filteredArtworks = filter === "all" ? artworks : artworks.filter((art) => art.category === filter);
 
-  const handleMouseEnter = (e) => {
-    if (e.target.readyState >= 2) {
-      // Ensure the video is ready to play
-      e.target.play();
-    }
-  };
-
-  const handleMouseLeave = (e) => {
-    e.target.pause();
-  };
-
-  const openLightbox = (art) => {
-    setSelectedArtwork(art);
-    setLightboxOpen(true);
-  };
-
-  const closeLightbox = () => {
-    setLightboxOpen(false);
-    setSelectedArtwork(null);
-  };
-
   return (
-    <div className="container text-orange-950 mx-auto px-4">
-      <h1 className="sr-only">Gallery</h1>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold text-center mb-8 hidden">Gallery</h1>
 
       {/* Dropdown Menu */}
       <div className="flex justify-end mt-10 mb-10  md:mt-5 lg:mt-20 lg:mb-16">
@@ -75,65 +50,25 @@ const Gallery = () => {
       </div>
 
       {/* Gallery Grid */}
-      {filteredArtworks.length === 0 ? (
-        <div className="flex justify-center items-center  mt-32 md:mt-32 lg:mt-52 xl:mt-52 2xl:-scroll-mt-60">
-          <div className="text-center bg-orange-300 p-10 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-orange-900">
-            <h2 className="text-2xl font-bold ">🚧 Work in Progress!</h2>
-            <p className="mt-2">Great things are on the way! Grab a coffee and check back soon. ☕</p>
-          </div>
-        </div>
-      ) : (
-        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
-          {filteredArtworks.map((art) => (
-            <div
-              key={art.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105"
-              onClick={() => openLightbox(art)}
-            >
-              <video
-                src={art.videoUrl}
-                poster={art.imageUrl}
-                muted
-                loop
-                loading="lazy"
-                className="w-full h-48 sm:h-72 md:h-72 lg:h-auto object-cover"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                aria-label={`${art.title || "Artwork"}: ${art.description}`}
-              />
-              <div className="p-4">
-                <p className="text-gray-700">{art.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* Lightbox */}
-      {lightboxOpen && selectedArtwork && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-4 w-11/12 max-w-4xl relative">
-            <button
-              onClick={closeLightbox}
-              className="absolute top-0 right-0 w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-800 bg-transparent rounded-full shadow-md transition-transform transform hover:scale-110 z-50"
-              aria-label="Close Lightbox"
-            >
-              <FontAwesomeIcon
-                icon={faXmark}
-                size="lg"
-              />
-            </button>
+      <div className="grid gap-16 sm:grid-cols-1 lg:grid-cols-2">
+        {filteredArtworks.map((art) => (
+          <div
+            key={art.id}
+            className="relative"
+          >
             <video
-              src={selectedArtwork.videoUrl}
+              src={art.videoUrl}
+              poster={art.imageUrl}
               controls
-              autoPlay
-              className="w-full mb-4"
+              muted
+              loop
+              preload="auto"
+              aria-label={`${art.title || "Artwork"}: ${art.description}`}
             />
-
-            <p className="text-gray-700">{selectedArtwork.description}</p>
+            <p className="mt-2 text-neutral-900 text-start">{art.description}</p>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
 };

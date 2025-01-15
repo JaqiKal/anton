@@ -5,7 +5,7 @@
   backdrop-filter: blur(4px); /* backdrop-filter */
   opacity: 0.7; /* bg-opacity-10 */
   box-shadow: inset 4px 4px 8px rgba(154, 52, 18, 0.24), inset -4px -4px 8px rgba(154, 52, 18, 0.2), 4px 4px 12px rgba(0, 0, 0, 0.35);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .textInput {
