@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const artworks = [
   {
     id: 1,
-    description: "Showcasing dynamic hand-drawn 2D animations and scenes created using industry-standard tools like TVPaint, Harmony, Photoshop, and After Effects.",
+    description: "This 2D Animation Showreel is showcasing my skills in everything from cleaned to rough animation. Animations made using TVPaint, Toon Boom Harmony, Photoshop and After Effects.",
     imageUrl: "https://res.cloudinary.com/dsbcjtatz/image/upload/v1736877445/anton/2D/antonSkogsberg_2DShowreel_v003_pilc19.mp4",
     videoUrl: "https://res.cloudinary.com/dsbcjtatz/video/upload/v1736877445/anton/2D/antonSkogsberg_2DShowreel_v003_pilc19.mp4",
     category: "2D",
@@ -11,7 +11,7 @@ const artworks = [
 
   {
     id: 2,
-    description: "A collection of 3D animations showcasing realistic physics, character rigging, and environmental design, created using Maya, Blender, After Effects, and Photoshop.",
+    description: "My 3D Animation is showcasing my animation skills in a wide variety of rigs, environments & camera setups. Animations made using Autodesk Maya, with assistance from Blender & Unreal Engin",
     imageUrl: "https://res.cloudinary.com/dsbcjtatz/image/upload/v1736877493/anton/3D/antonSkogsberg_3DShowreel_v007_yhq1tw.mp4",
     videoUrl: "https://res.cloudinary.com/dsbcjtatz/video/upload/v1736877493/anton/3D/antonSkogsberg_3DShowreel_v007_yhq1tw.mp4",
     category: "3D",
