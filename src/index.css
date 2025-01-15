@@ -15,7 +15,7 @@ body {
 
 body {
   margin: 0;
-  font-family: "Roboto", "Open Sans", Arial, sans-serif;
+  font-family: "Titillium", "Roboto", "Open Sans", Arial, sans-serif;
   line-height: 1.6; /* Optional: Adjust for better readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,11 +26,11 @@ code {
 }
 
 .heading {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Titillium", "Roboto", Arial, sans-serif;
   font-weight: 700;
 }
 
 .paragraph {
-  font-family: "Roboto", "Open Sans", Arial, sans-serif;
+  font-family: "Titillium", "Roboto", "Open Sans", Arial, sans-serif;
   font-weight: 400;
 }
