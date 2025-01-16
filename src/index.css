@@ -11,6 +11,7 @@ body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll */
+  background-color: #f9f5eb;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   line-height: 1.6; /* Optional: Adjust for better readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f5eb;
 }
 
 code {
