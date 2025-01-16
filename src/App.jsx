@@ -10,7 +10,7 @@ import Error500 from "./components/Error500";
 
 const App = () => {
   return (
-    <Router basename="/anton">
+    <Router>
       <div className="relative bg-customWhite">
         <Routes>
           <Route
