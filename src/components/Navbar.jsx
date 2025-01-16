@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <nav className="text-customGreen">
-      <div className="mx-auto mt-3 px-2 md:px-6 lg:px-8  xl:px-10 2xl:px-16">
+      <div className="mx-auto mt-2 mb-2 px-2 md:px-6 lg:px-8  xl:px-10 2xl:px-16">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">

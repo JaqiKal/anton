@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Layout from "./components/Layout";
+import Error500 from "./components/Error500";
 
 const App = () => {
   return (
@@ -33,6 +34,16 @@ const App = () => {
                 <About />
               </Layout>
             }
+          />
+
+          <Route
+            path="/error500"
+            element={<Error500 />}
+          />
+
+          <Route
+            path="*"
+            element={<Error500 />}
           />
         </Routes>
       </div>

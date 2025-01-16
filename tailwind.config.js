@@ -27,7 +27,7 @@ module.exports = {
       },
     
       fontFamily: {
-        customFont: ['Titillium', 'Sniglet', 'Roboto', 'sans-serif'],
+        customFont: ['Sniglet'],
       },
       fontSize: { 
         customXxs: '0.5rem', // 8px
