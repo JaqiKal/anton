@@ -40,7 +40,11 @@ const App = () => {
 
           <Route
             path="/error403"
-            element={<Error403 />}
+            element={
+              <Layout>
+                <Error403 />
+              </Layout>
+            }
           />
 
           <Route

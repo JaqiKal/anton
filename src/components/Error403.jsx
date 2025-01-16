@@ -4,25 +4,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/images/logo.webp";
 
 function Error403() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-customWhite relative">
-      {/* Logo */}
-      <div className="absolute top-4 left-4 z-20 p-0">
-        <Link
-          to="/"
-          aria-label="Go to homepage via logo"
-        >
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-20 md:h-28 lg:h-28 xl:h-28 2xl:h-32 w-auto transition-transform duration-300 hover:scale-110"
-          />
-        </Link>
-      </div>
-
       {/* SVG Background */}
       <svg
         className="absolute w-full h-full top-0 left-0 z-0"
@@ -30,7 +15,7 @@ function Error403() {
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
       >
-        {/* Example SVG Pattern */}
+        {/* SVG Pattern */}
         <rect
           width="800"
           height="600"
@@ -49,7 +34,7 @@ function Error403() {
             />
             <stop
               offset="100%"
-              stopColor="#005c0e" // 100% saturation of CustomGreen
+              stopColor="#f57356" // 70% saturation of CustomOrange
             />
           </radialGradient>
         </defs>
@@ -81,7 +66,7 @@ function Error403() {
             Return to Homepage
           </Link>
           <Link
-            to="/contact"
+            to="/about"
             className="flex items-center justify-center px-4 py-2 bg-customOrange text-white rounded-md hover:bg-orange-600 transition"
           >
             <FontAwesomeIcon
