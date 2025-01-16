@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Layout from "./components/Layout";
+import Error403 from "./components/Error403";
+import Error404 from "./components/Error404";
 import Error500 from "./components/Error500";
 
 const App = () => {
@@ -32,6 +34,24 @@ const App = () => {
             element={
               <Layout>
                 <About />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/error403"
+            element={
+              <Layout>
+                <Error403 />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/error404"
+            element={
+              <Layout>
+                <Error404 />
               </Layout>
             }
           />
