@@ -20,7 +20,6 @@ body {
   line-height: 1.6; /* Optional: Adjust for better readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f9f5eb;
 }
 
 code {
