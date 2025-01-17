@@ -6,16 +6,19 @@ module.exports = {
          
         backgroundImage: {
           'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
+          'radial-gradient-custom': 'radial-gradient(circle, var(--gradient-start), var(--gradient-end))',
         },
+        
       colors: {
         customPurple: '#4d3f78',
         customPurpleDark: '#2e2548',
         customGreen: '#17471E', // coolors Pakistan Green, almost tw-green-950 
         customOrange: '#c42d0b', // coolors Engineering Orange, almost tw-orange-800
         customOrangeDark: '#a61b07', 
-   
         customWhite: '#f9f5eb', 
         customOrangeBg:'#efcebf',
+        gradientErrorpageStart:  '#ede0c0',
+        gradientErrorpageEnd:  '#f57356',
       },
 
   
@@ -27,7 +30,7 @@ module.exports = {
       },
     
       fontFamily: {
-        customFont: ['Sniglet'],
+        customFont: ['Sniglet', 'Roboto', 'sans-serif'],
       },
       fontSize: { 
         customXxs: '0.5rem', // 8px
@@ -40,5 +43,14 @@ module.exports = {
       backdropBlur: ['hover', 'focus'],
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addBase, theme }) {
+      addBase({
+        ':root': {
+          '--gradient-start': theme('colors.gradientErrorpageStart'),
+          '--gradient-end': theme('colors.gradientErrorpageEnd'),
+        },
+      });
+    },
+  ],
 };
