@@ -1,6 +1,6 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom"; // TODO: Change to BrowserRouter when changing from GH pages to eg. Netlify that better supports client side routing.
-import Home from "./components/Home";
+import { HashRouter as Router, Routes, Route } from "react-router-dom"; // TODO: Rememebr change to BrowserRouter when changing eg. Netlify that better supports client side routing.
+import Home from "./components/Home"; //TODO: Consider creating barrel file to export all components from one file.
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Layout from "./components/Layout";
@@ -38,6 +38,7 @@ const App = () => {
             }
           />
 
+          {/* Specific Error Routes */}
           <Route
             path="/error403"
             element={
@@ -46,7 +47,12 @@ const App = () => {
               </Layout>
             }
           />
+          <Route
+            path="/error500"
+            element={<Error500 />}
+          />
 
+          {/* 404 Not Found Route */}
           <Route
             path="/error404"
             element={
@@ -54,11 +60,6 @@ const App = () => {
                 <Error404 />
               </Layout>
             }
-          />
-
-          <Route
-            path="/error500"
-            element={<Error500 />}
           />
 
           {/* Catch-All Route for 404 Errors */}
