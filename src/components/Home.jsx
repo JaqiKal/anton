@@ -1,15 +1,46 @@
+/**
+ * Home.jsx
+ *
+ * This component renders a looping background video using ReactPlayer.
+ *
+ * The video is set to autoplay and loop infinitely while being muted to comply with
+ * modern browser autoplay policies. By muting the video, we ensure it starts playing
+ * automatically without requiring user interaction, eliminating the need for a fallback
+ * "Play Video" button.
+ *
+ * Native video controls are enabled, allowing users to play, pause, and interact with the video
+ * as needed.
+ *
+ * If autoplay issues arise due to browser-specific behaviors or user settings, consider
+ * reintroducing a manual play option to enhance accessibility and user control.
+ * For more information on ReactPlayer, visit: https://www.npmjs.com/package/react-player
+ *
+ * Author: JaqiKal
+ * Date: 2025 Jan
+ *
+ */
+
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
 const Home = () => {
   // Track whether the player should be playing
   const [isPlaying, setIsPlaying] = useState(false);
+  // Track if an autoplay attempt has been made
+  const [setPlayAttempted] = useState(false);
 
-  // On mount => auto-play, on unmount => pause
+  /**
+   * useEffect Hook
+   *
+   * - Runs once when the component mounts.
+   * - Attempts to autoplay the video by setting isPlaying to true.
+   * - Cleans up by setting isPlaying to false when the component unmounts.
+   */
   useEffect(() => {
-    setIsPlaying(true); // Auto-play when the component mounts
+    setIsPlaying(true);
+
     return () => {
-      setIsPlaying(false); // Pause/stop when unmounting
+      setIsPlaying(false);
     };
   }, []);
 
@@ -27,9 +58,10 @@ const Home = () => {
           controls // Native player controls
           width="100%" // Fill container width
           height="100%" // Fill container height
+          muted // By muting the video, one comply with browser autoplay policies, allowing the video to autoplay seamlessly.
           onPlay={handlePlay} // Update state if user clicks "Play"
           onPause={handlePause} // Update state if user clicks "Pause"
-          // muted // uncomment if you want it muted by default
+          onError={() => setPlayAttempted(false)} // Handle autoplay error
         />
       </div>
     </div>
