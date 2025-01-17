@@ -41,11 +41,7 @@ const App = () => {
           {/* Specific Error Routes */}
           <Route
             path="/error403"
-            element={
-              <Layout>
-                <Error403 />
-              </Layout>
-            }
+            element={<Error403 />}
           />
           <Route
             path="/error500"
@@ -55,11 +51,7 @@ const App = () => {
           {/* 404 Not Found Route */}
           <Route
             path="/error404"
-            element={
-              <Layout>
-                <Error404 />
-              </Layout>
-            }
+            element={<Error404 />}
           />
 
           {/* Catch-All Route for 404 Errors */}
