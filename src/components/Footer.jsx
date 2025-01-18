@@ -24,7 +24,7 @@ const Footer = () => {
       "
       >
         {/* Social Media Icons (Always Centered) */}
-        <div className="flex space-x-6 lg:space-x-12 sm:mb-3">
+        <div className="flex space-x-6 lg:space-x-12 sm:mb-0">
           {/* Email Icon */}
           <a
             href="mailto:atoartworks@gmail.com"
