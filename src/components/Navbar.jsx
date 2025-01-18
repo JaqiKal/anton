@@ -93,7 +93,7 @@ function Navbar() {
       {/* Links for Small Screens */}
 
       <div className={`overflow-hidden lg:hidden transition-all duration-700  ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"}`}>
-        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center  bg-customOrange bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+        <ul className="font-customFont rounded-md text-xl font-bold space-y-6 flex flex-col items-end justify-center  bg-customOrange bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
           <li>
             <Link
               to="/"
