@@ -30,7 +30,7 @@ module.exports = {
       },
     
       fontFamily: {
-        customFont: ['Sniglet', 'Roboto', 'sans-serif'],
+        customFont: ['Titillium', 'Roboto', 'sans-serif'],
       },
       fontSize: { 
         customXxs: '0.5rem', // 8px
