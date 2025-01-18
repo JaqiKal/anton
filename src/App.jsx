@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom"; // TODO: Rememebr change to BrowserRouter when changing eg. Netlify that better supports client side routing.
 import Home from "./components/Home"; //TODO: Consider creating barrel file to export all components from one file.
 import Gallery from "./components/Gallery";
-import About from "./components/old-About";
+import About from "./components/About";
 import Layout from "./components/Layout";
 import Error403 from "./components/Error403";
 import Error404 from "./components/Error404";

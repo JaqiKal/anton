@@ -1,5 +1,5 @@
 /**
- * AboutContact02.jsx
+ * AboutContact.jsx
  *
  * This component renders two columns:
  * - A left side featuring an <h1> "Resume" header, a preview image, and a
@@ -19,7 +19,7 @@ import antonCv from "../assets/doc/cv-anton-skogsberg.pdf";
 import antonCvImg from "../assets/images/cv-anton-skogsberg.webp";
 import DownloadButton from "./DownloadButton";
 
-const AboutContact02 = () => {
+const AboutContact = () => {
   return (
     <div
       className="
@@ -151,4 +151,4 @@ const AboutContact02 = () => {
   );
 };
 
-export default AboutContact02;
+export default AboutContact;
