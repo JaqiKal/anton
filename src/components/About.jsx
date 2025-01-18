@@ -1,3 +1,18 @@
+/**
+ * AboutContact.jsx
+ *
+ * This component renders a responsive "Contact Me" form on the left,
+ * alongside a biography and image on the right. It also includes a
+ * centered download button for users to obtain the CV.
+ *
+ * The layout is designed for both mobile and desktop views,
+ * maintaining aesthetic consistency via Tailwind CSS and CSS modules.
+ *
+ * Author: JaqiKal
+ * Date: January 2025
+ *
+ */
+
 import React, { useState } from "react";
 import antonTini from "../assets/images/anton-tini.webp";
 import emailjs from "emailjs-com";
