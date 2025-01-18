@@ -89,7 +89,7 @@ const AboutContact = () => {
             <img
               alt="Anton Skogsberg"
               src={antonTini}
-              className="w-full h-full object-cover shadow-lg rounded-lg"
+              className="w-full h-full  object-cover shadow-lg rounded-lg"
             />
             {/* Transparent Overlay to Prevent Right-Click */}
             <div
@@ -115,27 +115,12 @@ const AboutContact = () => {
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
-              className="font-bold text-customOrange hover:text-blue-700 transition-transform duration-300"
+              className="font-bold text-customOrange hover:text-cyan-600 transition-transform duration-300"
             >
               my portfolio
             </Link>{" "}
             and get in touch. I’d love to hear from you!
           </p>
-
-          {/* GitHub Link ) */}
-          <div className="text-justify text-neutral-50 leading-relaxed mt-4">
-            Thanks to{" "}
-            <a
-              href="https://github.com/JaqiKal"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Link to app creators GitHub profile"
-              className="text-emerald-600 font-bold hover:text-blue-700 transition-transform duration-300"
-            >
-              JaqiKal{" "}
-            </a>
-            for making this web-app possible!
-          </div>
 
           <p className="text-justify text-neutral-50 leading-relaxed mt-4">Kind regards,</p>
           <div className="flex justify-start">
@@ -145,6 +130,7 @@ const AboutContact = () => {
               className="w-80 h-auto mt-4"
             />
           </div>
+          <div className="text-justify text-neutral-50 leading-relaxed mt-4">Anton Skogsberg</div>
         </div>
       </div>
     </div>
