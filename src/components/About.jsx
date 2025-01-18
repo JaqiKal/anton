@@ -84,12 +84,12 @@ const AboutContact = () => {
         "
       >
         {/* Images Section */}
-        <div className="flex justify-center">
+        <div className="w-full flex justify-center">
           <div className="relative rounded-full bg-stone-300 w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
             <img
               alt="Anton Skogsberg"
               src={antonTini}
-              className="w-full h-full  object-cover shadow-lg rounded-lg"
+              className="w-full h-full object-cover shadow-lg rounded-full" /* Ensure fully rounded image */
             />
             {/* Transparent Overlay to Prevent Right-Click */}
             <div
