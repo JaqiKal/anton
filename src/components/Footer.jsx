@@ -5,7 +5,7 @@ import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; 
 
 const Footer = () => {
   return (
-    <footer className="text-center p-1 mt-6">
+    <footer className="text-center  pb-6 bg-neutral-900 ">
       {/* Social Media Section */}
       <div className="flex justify-center items-center space-x-6 lg:space-x-12">
         {/* Email Icon */}
@@ -13,7 +13,7 @@ const Footer = () => {
           href="mailto:atoartworks@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-customGreen hover:text-customOrange transition duration-300"
+          className="text-neutral-50 hover:text-customOrange transition duration-300"
         >
           <FontAwesomeIcon
             icon={faEnvelope}
@@ -26,7 +26,7 @@ const Footer = () => {
           href="https://www.instagram.com/atoartworks/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-customGreen hover:text-customOrange transition duration-300"
+          className="text-neutral-50 hover:text-customOrange transition duration-300"
         >
           <FontAwesomeIcon
             icon={faInstagram}
@@ -39,7 +39,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/anton-skogsberg-35701a24b/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-customGreen hover:text-customOrange transition duration-300"
+          className="text-neutral-50 hover:text-customOrange transition duration-300"
         >
           <FontAwesomeIcon
             icon={faLinkedinIn}
