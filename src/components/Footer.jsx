@@ -5,47 +5,98 @@ import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; 
 
 const Footer = () => {
   return (
-    <footer className="text-center  pb-6 bg-neutral-900 ">
-      {/* Social Media Section */}
-      <div className="flex justify-center items-center space-x-6 lg:space-x-12">
-        {/* Email Icon */}
-        <a
-          href="mailto:atoartworks@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-neutral-50 hover:text-customOrange transition duration-300"
-        >
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            className="w-5 h-5"
-          />
-        </a>
+    <footer className="pb-6 bg-neutral-900 w-full">
+      <div
+        className="
+        relative
+        w-full
+        max-w-screen-2xl
+        mx-auto
+        px-4
+        flex
+        flex-col
+        items-center
+        /* Stays stacked until lg (1024px), then row */
+        lg:flex-row
+        lg:justify-center
+        lg:items-center
+        h-auto
+      "
+      >
+        {/* Social Media Icons (Always Centered) */}
+        <div className="flex space-x-6 lg:space-x-12 sm:mb-3">
+          {/* Email Icon */}
+          <a
+            href="mailto:atoartworks@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
+          >
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="w-6 h-6"
+            />
+          </a>
 
-        {/* Instagram Icon */}
-        <a
-          href="https://www.instagram.com/atoartworks/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-neutral-50 hover:text-customOrange transition duration-300"
-        >
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="w-5 h-5"
-          />
-        </a>
+          {/* Instagram Icon */}
+          <a
+            href="https://www.instagram.com/atoartworks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="w-6 h-6"
+            />
+          </a>
 
-        {/* LinkedIn Icon */}
-        <a
-          href="https://www.linkedin.com/in/anton-skogsberg-35701a24b/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-neutral-50 hover:text-customOrange transition duration-300"
+          {/* LinkedIn Icon */}
+          <a
+            href="https://www.linkedin.com/in/anton-skogsberg-35701a24b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="w-6 h-6"
+            />
+          </a>
+        </div>
+
+        {/* © 2025 Website by JaqiKal */}
+        <div
+          className="
+      
+            text-xs
+            text-neutral-50
+            flex items-center
+            relative
+            lg:absolute
+            lg:right-4
+            lg:top-1/2
+            lg:-translate-y-1/2
+          "
         >
-          <FontAwesomeIcon
-            icon={faLinkedinIn}
-            className="w-5 h-5"
-          />
-        </a>
+          <a
+            href="https://github.com/JaqiKal"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to app creators GitHub profile"
+            className="
+              text-cyan-600
+              font-bold
+              hover:text-customOrange
+              transition-transform
+              duration-300
+              text-xs
+              
+            "
+          >
+            &copy; 2025 Website by JaqiKal
+          </a>
+        </div>
       </div>
     </footer>
   );
