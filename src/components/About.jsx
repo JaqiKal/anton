@@ -49,7 +49,7 @@ const AboutContact = () => {
         <h1 className="text-3xl text-center text-neutral-50 font-bold hidden sr-only">Resume</h1>
 
         {/* CV Image */}
-        <div className="w-full md:w-5/6 flex justify-center mt-4">
+        <div className="w-full md:w-11/12 lg:w-full xl:w-5/6 file:flex justify-center mt-4">
           <img
             src={antonCvImg}
             alt="Anton Skogsberg's resume"
