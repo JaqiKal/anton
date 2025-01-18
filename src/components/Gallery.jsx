@@ -27,10 +27,10 @@ const Gallery = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8 hidden">Gallery</h1>
+      <h1 className="text-4xl font-bold text-center mb-8 hidden">Showreel gallery</h1>
 
       {/* Dropdown Menu */}
-      <div className="flex justify-end mt-10 mb-10  md:mt-5 lg:mt-20 lg:mb-16">
+      <div className="flex justify-end mt-10 mb-10 text-neutral-900 md:mt-5 lg:mt-20 lg:mb-16">
         {/* Label for accessibility */}
         <label
           htmlFor="filterArtworks"
@@ -42,7 +42,7 @@ const Gallery = () => {
           id="filterArtworks"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
-          className="px-4 py-2 bg-customDutchLight rounded-lg border border-orange-800 shadow-sm"
+          className="px-4 py-2  bg-neutral-300 rounded-lg border border-customOrange shadow-sm"
         >
           <option value="all">Show All</option>
           <option value="2D">2D animation</option>

@@ -13,8 +13,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="text-customGreen">
-      <div className="mx-auto mt-2 mb-2 px-2 md:px-6 lg:px-8  xl:px-10 2xl:px-16">
+    <nav className="bg-neutral-950">
+      <div className="mx-auto px-2 md:px-6 lg:px-8 xl:px-10 xl:ml-20 2xl:px-16">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -22,24 +22,24 @@ function Navbar() {
               <span className="sr-only">Home</span>
               <img
                 src={logo}
-                alt="Logo"
-                className="h-20 md:h-28 lg:h-28 xl:h-28 2xl:h-32 w-auto transition-transform duration-300 hover:scale-110"
+                alt="Logo-x"
+                className="h-12 w-auto transition-transform duration-300 hover:scale-110"
                 aria-label="Go to homepage via logo"
               />
             </Link>
           </div>
 
           {/* Links for Large Screens */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
-            <div className="h-full w-full bg-customOrangeBg rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 lg:px-3 lg:py-2 lg:mt-10 lg:mr-6">
-              <ul className="flex  space-x-10 lg:px-2  font-customFont lg:text-xl">
+          <div className="hidden lg:flex p-0 m-0 after:lg:items-center lg:space-x-8">
+            <div className="h-full w-full lg:px-3 xl:px-2">
+              <ul className="flex  space-x-10 xl:mr-20  font-customFont font-bold text-xl">
                 <li>
                   <Link
                     to="/"
                     className={`transition-transform duration-500 ease-in-out ${isActive("/") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Home navigation link"
                   >
-                    <span className="inline-block hover:scale-110">Home</span>
+                    <span className="inline-block hover:scale-110">HOME</span>
                   </Link>
                 </li>
                 <li>
@@ -48,7 +48,7 @@ function Navbar() {
                     className={`transition-transform duration-500 ease-in-out ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Work navigation link"
                   >
-                    <span className="inline-block hover:scale-110">Showreel</span>
+                    <span className="inline-block hover:scale-110">SHOWREEL</span>
                   </Link>
                 </li>
                 <li>
@@ -57,7 +57,7 @@ function Navbar() {
                     className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="About navigation link"
                   >
-                    <span className="inline-block hover:scale-110">Say Hello!</span>
+                    <span className="inline-block hover:scale-110">RESUME & CONTACT</span>
                   </Link>
                 </li>
               </ul>
@@ -72,7 +72,7 @@ function Navbar() {
               aria-label="Toggle navigation"
             >
               <svg
-                className="h-8 w-8  text-customGreen hover:text-orange-800 transition-transform duration-500 ease-in-out"
+                className="h-8 w-8  text-neutral-50 hover:text-customOrange transition-transform duration-500 ease-in-out"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -93,7 +93,7 @@ function Navbar() {
       {/* Links for Small Screens */}
 
       <div className={`overflow-hidden lg:hidden transition-all duration-700  ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"}`}>
-        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center  bg-customOrangeBg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
+        <ul className="font-customFont rounded-md text-lg space-y-4 flex flex-col items-end justify-center  bg-customOrange bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
           <li>
             <Link
               to="/"
