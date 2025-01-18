@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom"; // TODO:
 import Home from "./components/Home"; //TODO: Consider creating barrel file to export all components from one file.
 import Gallery from "./components/Gallery";
 import About from "./components/About";
+import About02 from "./components/About02";
 import Layout from "./components/Layout";
 import Error403 from "./components/Error403";
 import Error404 from "./components/Error404";
@@ -11,7 +12,7 @@ import Error500 from "./components/Error500";
 const App = () => {
   return (
     <Router>
-      <div className="relative bg-customWhite">
+      <div className="relative bg-neutral-900 text-neutral-50">
         <Routes>
           <Route
             path="/"
@@ -34,6 +35,14 @@ const App = () => {
             element={
               <Layout>
                 <About />
+              </Layout>
+            }
+          />
+          <Route
+            path="/about02"
+            element={
+              <Layout>
+                <About02 />
               </Layout>
             }
           />
