@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: { max: "374px" }, // Custom breakpoint for anything below 375px
+    },
          
         backgroundImage: {
           'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
@@ -34,7 +37,6 @@ module.exports = {
       },
       fontSize: { 
         customXxs: '0.5rem', // 8px
-        customXxss: '0.3rem', // 
       },
     },
   },
