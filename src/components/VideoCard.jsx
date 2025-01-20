@@ -34,7 +34,7 @@ const VideoCard = ({ video, autoplay = false, loop = false, muted = false, showD
       ></iframe>
     </div>
     {/* Conditionally Render Description */}
-    {showDescription && <p className="mt-2 text-neutral-900 text-start">{video.description}</p>}
+    {showDescription && <p className="p-2 bg-neutral-900 text-neutral-300 text-start">{video.description}</p>}
   </div>
 );
 
