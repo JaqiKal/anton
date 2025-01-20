@@ -53,11 +53,12 @@ const Gallery = () => {
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid gap-16 sm:grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-1 lg:grid-cols-2 text-neutral-300">
         {filteredArtworks.map((art) => (
           <VideoCard
             key={art.id}
             video={art}
+            description={art.description}
           />
         ))}
       </div>
