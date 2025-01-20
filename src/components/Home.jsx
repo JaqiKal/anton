@@ -33,8 +33,8 @@ const Home = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="video-wrapper w-full sm:w-4/5 md:w-3/5 lg:w-1/2 xl:w-2/3 shadow-lg rounded overflow-hidden">
+    <div className="w-full flex items-center justify-center h-[80dvh]">
+      <div className="w-full max-w-7xl max-h-full mt-16 aspect-video mx-1 md:mx-2">
         <VideoCard
           video={video}
           autoplay={true} // Autoplay
