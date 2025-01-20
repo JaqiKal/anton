@@ -32,7 +32,7 @@ function Navbar() {
           </div>
 
           {/* Links for Large Screens */}
-          <div className="hidden lg:flex p-0 m-0 items-center lg:space-x-8">
+          <div className="hidden lg:flex p-0 m-0 items-center lg:space-x-8 text-neutral-300">
             <div className="h-full w-full lg:px-3 xl:px-2">
               <ul className="flex space-x-10 xl:mr-20 font-customFont font-bold text-xl">
                 {/* HOME Link with Icon */}
