@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faHome, faClapperboard, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/images/logo.webp";
 
 function Navbar() {
@@ -23,42 +25,84 @@ function Navbar() {
               <img
                 src={logo}
                 alt="Logo-x"
-                className="h-12 w-auto transition-transform duration-300 hover:scale-110"
+                className="h-8 md:h-12 w-auto transition-transform duration-300 hover:scale-110"
                 aria-label="Go to homepage via logo"
               />
             </Link>
           </div>
 
           {/* Links for Large Screens */}
-          <div className="hidden lg:flex p-0 m-0 after:lg:items-center lg:space-x-8">
+          <div className="hidden lg:flex p-0 m-0 items-center lg:space-x-8">
             <div className="h-full w-full lg:px-3 xl:px-2">
-              <ul className="flex  space-x-10 xl:mr-20  font-customFont font-bold text-xl">
+              <ul className="flex space-x-10 xl:mr-20 font-customFont font-bold text-xl">
+                {/* HOME Link with Icon */}
                 <li>
                   <Link
                     to="/"
                     className={`transition-transform duration-500 ease-in-out ${isActive("/") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Home navigation link"
                   >
-                    <span className="inline-block hover:scale-110">HOME</span>
+                    <span className="inline-flex items-center hover:scale-110">
+                      <FontAwesomeIcon
+                        icon={faHome}
+                        className="text-md mr-2"
+                      />
+                      HOME
+                    </span>
                   </Link>
                 </li>
+
+                {/* SHOWREEL Link with Icon */}
                 <li>
                   <Link
                     to="/work"
                     className={`transition-transform duration-500 ease-in-out ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Work navigation link"
                   >
-                    <span className="inline-block hover:scale-110">SHOWREEL</span>
+                    <span className="inline-flex items-center hover:scale-110">
+                      <FontAwesomeIcon
+                        icon={faClapperboard}
+                        className="text-md mr-2"
+                      />
+                      SHOWREEL
+                    </span>
                   </Link>
                 </li>
+
+                {/* RESUME Link with Icon */}
                 <li>
                   <Link
                     to="/about"
                     className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
-                    aria-label="About navigation link"
+                    aria-label="Resume navigation link"
                   >
-                    <span className="inline-block hover:scale-110">RESUME & CONTACT</span>
+                    <span className="inline-flex items-center hover:scale-110">
+                      <FontAwesomeIcon
+                        icon={faFileAlt}
+                        className="text-md mr-2"
+                      />
+                      RESUME
+                    </span>
                   </Link>
+                </li>
+
+                {/* CONTACT Link with Icon */}
+                <li>
+                  <a
+                    href="mailto:atoartworks@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-transform duration-500 ease-in-out hover:text-customOrange"
+                    aria-label="Send an email"
+                  >
+                    <span className="inline-flex items-center m-0 p-0 text-md">
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        className="text-md mr-2 align-middle"
+                      />
+                      CONTACT
+                    </span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -91,9 +135,9 @@ function Navbar() {
       </div>
 
       {/* Links for Small Screens */}
-
-      <div className={`overflow-hidden lg:hidden transition-all duration-700  ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"}`}>
-        <ul className="font-customFont rounded-md text-xl font-bold space-y-6 flex flex-col items-end justify-center  bg-customOrange bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+      <div className={`overflow-hidden lg:hidden transition-all duration-700 ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"}`}>
+        <ul className="font-customFont rounded-md text-md font-bold space-y-1 flex flex-col items-end justify-center bg-customOrange bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+          {/* HOME Link with Icon on the Right */}
           <li>
             <Link
               to="/"
@@ -101,27 +145,67 @@ function Navbar() {
               onClick={handleLinkClick}
               aria-label="Home navigation link"
             >
-              <span className="inline-block hover:scale-110">Home</span>
+              <span className="inline-flex items-center hover:scale-110">
+                Home
+                <FontAwesomeIcon
+                  icon={faHome}
+                  className="text-md ml-2"
+                />
+              </span>
             </Link>
           </li>
 
+          {/* SHOWREEL Link with Icon on the Right */}
           <li>
             <Link
               to="/work"
-              className={`block px-4  ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
+              className={`block px-4 ${isActive("/work") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
             >
-              <span className="inline-block hover:scale-110">Showreel</span>
+              <span className="inline-flex items-center hover:scale-110">
+                Showreel
+                <FontAwesomeIcon
+                  icon={faClapperboard}
+                  className="text-md ml-2"
+                />
+              </span>
             </Link>
           </li>
+
+          {/* RESUME Link with Icon on the Right */}
           <li>
             <Link
               to="/about"
-              className={`block px-4 pb-3  ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
+              className={`block px-4 ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
             >
-              <span className="inline-block hover:scale-110">Say Hello!</span>
+              <span className="inline-flex items-center hover:scale-110">
+                Resume
+                <FontAwesomeIcon
+                  icon={faFileAlt}
+                  className="text-md ml-2"
+                />
+              </span>
             </Link>
+          </li>
+
+          {/* CONTACT Link with Icon on the Right */}
+          <li>
+            <a
+              href="mailto:atoartworks@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform duration-500 ease-in-out hover:text-customOrange"
+              aria-label="Send an email"
+            >
+              <span className=" block px-4 inline-flex items-center hover:scale-110">
+                Contact
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="text-md ml-2"
+                />
+              </span>
+            </a>
           </li>
         </ul>
       </div>
