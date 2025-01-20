@@ -5,7 +5,7 @@ import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; 
 
 const Footer = () => {
   return (
-    <footer className="pb-5 xs:pb-3 sm:pb-7 lg:pb-2 2xl:pb-5 bg-neutral-900 w-full">
+    <footer className="pb-5 xs:pb-1 xs:pt-3  sm:pb-7 lg:pb-2 2xl:pb-5 bg-neutral-900 w-full">
       <div
         className="
         relative
@@ -91,6 +91,9 @@ const Footer = () => {
               transition-transform
               duration-300
               text-xs
+              xs:text-customXxs
+              xs:mb-1
+              sm:text-customXxs
               
             "
           >
