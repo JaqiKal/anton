@@ -166,16 +166,16 @@ const AboutContact = () => {
         {/* Bio Section */}
 
         <div className="md:mr-26">
-          <p className="text-justify text-neutral-50 leading-relaxed  mx-4 ">Hello and welcome! I’m a 3D &amp; 2D animator educated from The Animation Workshop in Denmark.</p>
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4 mx-4 8">
+          <p className="text-justify text-neutral-300 leading-relaxed  mx-4 ">Hello and welcome! I’m a 3D &amp; 2D animator educated from The Animation Workshop in Denmark.</p>
+          <p className="text-justify text-neutral-300 leading-relaxed mt-4 mx-4 8">
             I have always loved animation growing up, but it wasn’t until I took a leap of faith by moving to a new country and trying to get into one of the world’s top animation schools that I truly discovered what it takes to succeed in the
             industry.
           </p>
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4 mx-4 8">
+          <p className="text-justify text-neutral-300 leading-relaxed mt-4 mx-4 8">
             Over the course of my studies, I have worked on several large collaborative projects, sharpening my skills in industry-standard tools like Maya, Blender, Toon Boom, and TVPaint. I’m always excited to pick up something new and work
             collaboratively with team members to solve problems. My experience as a production manager makes me meticulous about schedules and deadlines. My aim is to consistently deliver work on time and at a high standard.
           </p>
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4 mx-4 8">
+          <p className="text-justify text-neutral-300 leading-relaxed mt-4 mx-4 8">
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
@@ -201,13 +201,13 @@ const AboutContact = () => {
 
         {/* Signature */}
         <div className="text-center mt-20 mx-4 md:mr-28 lg:text-left">
-          <p className="text-neutral-50">Kind regards,</p>
+          <p className="text-neutral-300">Kind regards,</p>
           <img
             src={signature}
             alt="Anton Skogsberg"
             className="w-60 mt-4"
           />
-          <p className="text-neutral-50 py-5">Anton Skogsberg</p>
+          <p className="text-neutral-300 py-5">Anton Skogsberg</p>
         </div>
       </div>
     </div>
