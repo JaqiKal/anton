@@ -2,9 +2,8 @@
  * AboutContact.jsx
  *
  * This component renders two columns:
- * - A left side featuring an <h1> "Resume" header, a preview image, and a
- *   "Download My CV" button.
- * - A right side with an image, bio text, signature, and acknowledgements.
+ * - A left side featuring a resume, and a "Download My CV" button.
+ * - A right side with an image, bio text, signature, and contact information.
  *
  * Author: JaqiKal
  * Date: January 2025
@@ -13,10 +12,11 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import antonTini from "../assets/images/anton-tini2.webp";
 import signature from "../assets/images/signature.webp";
 import antonCv from "../assets/doc/cv-anton-skogsberg.pdf";
-import antonCvImg from "../assets/images/cv-anton-skogsberg.webp";
 import DownloadButton from "./DownloadButton";
 
 const AboutContact = () => {
@@ -25,40 +25,114 @@ const AboutContact = () => {
       className="
         flex flex-wrap
         lg:flex-nowrap
-        items-center
-        lg:items-start
+        items-start
         justify-center
-        xl:ml-32 xl:mr-20
-        p-1
-        min-h-[80vh]
+        p-4
+        min-h-screen
+        gap-10
+        md:gap-5
       "
     >
-      {/*  Resume Image + Download Button */}
+      {/* Left Column: CV Section */}
       <div
         className="
           w-full
           lg:w-1/2
-          mx-auto
           flex flex-col
           items-center
-          pl-0
-          lg:pl-8
+          lg:items-start
+          space-y-6
+          md:mt-5
+       
         "
       >
-        {/* H1 Header for Resume (sr-only) */}
-        <h1 className="text-3xl text-center text-neutral-50 font-bold hidden sr-only">Resume</h1>
+        {/* CV Work Experience */}
+        <div className="mx-auto px-6 text-neutral-950 bg-neutral-300 p-6 rounded-lg border-solid border-2 border-cyan-600 w-full md:w-5/6 ">
+          <h2 className="text-2xl font-semibold">Work Experience</h2>
 
-        {/* CV Image */}
-        <div className="w-full md:w-11/12 lg:w-full xl:w-5/6 file:flex justify-center mt-4">
-          <img
-            src={antonCvImg}
-            alt="Anton Skogsberg's resume"
-            className="w-full h-auto object-cover"
-          />
+          <ul className="mt-3 space-y-6 text-neutral-800 ">
+            {/* Work Experience Items */}
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">Arcadia - Bachelor Project Animation</h3>
+              <p className="col-span-12 text-md md:hidden">(Jan. 2025 - Present)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Director, Storyboarder, Production Manager, Animator</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Jan. 2025 - Present)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">Doppelganger - Bachelor Project Animation</h3>
+              <p className="col-span-12 text-md md:hidden">(Jan. 2025 - Present)</p>
+              <p className="md:ml-4   md:col-span-8">Animator, Technical Animator</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Jan. 2025 - Present)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">Something Soup - Animated Web Series</h3>
+              <p className="col-span-12 text-md md:hidden">(2018 - Present)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Animator, Clean-Up, Color, Production Manager</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(2018 - Present)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">GLITCH Gathering - Animated Commercial</h3>
+              <p className="col-span-12 text-md md:hidden">(Spring 2024)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Animator, Technical Animator, Production Manager</p>
+              <p className="col-span-12 md:col-span-4 text-sm  text-right hidden md:block">(Spring 2024)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">FISK! Animated Short Film Production</h3>
+              <p className="col-span-12 text-md  md:hidden">(Spring 2023)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Animator, Production Manager</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Spring 2023)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">La Chambre Du General - Bachelor Project Animation</h3>
+              <p className="col-span-12 text-md  md:hidden">(Spring 2021)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Clean-Up, Color</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Spring 2021)</p>
+            </li>
+          </ul>
+
+          {/* CV Education */}
+          <h2 className="text-2xl font-semibold text-neutral-950 mt-12">Education</h2>
+          <ul className="mt-4 space-y-6 text-neutral-800 ">
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">Bachelor in Animation - The Animation Workshop (VIA University College)</h3>
+              <p className="col-span-12 text-md  md:hidden">(2022 - Present)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Bachelor in Animation Education</p>
+              <p className="col-span-12 md:col-span-4 text-sm  text-right hidden md:block">(2022 - Present)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">The Drawing Academy - The Animation Workshop (VIA University College)</h3>
+              <p className="col-span-12 text-md  md:hidden">(Fall 2015)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Classical Drawing Education Course</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Fall 2015)</p>
+            </li>
+            <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">IT & Programming High School - NTI Gymnasiet Södertörn</h3>
+              <p className="col-span-12 text-md  md:hidden">(2012 - 2015)</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Bachelor preparatory program in Mathematics, Physics & Programming</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(2012 - 2015)</p>
+            </li>
+          </ul>
+
+          {/* CV Skills */}
+          <h2 className="text-2xl font-semibold text-neutral-950 mt-12">Skills</h2>
+          <ul className="mt-4 space-y-6 text-neutral-800 ">
+            <li className="grid grid-cols-12 gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">3D Programs</h3>
+              <p className="md:ml-4 col-span-12">Autodesk Maya, Blender, Unreal Engine</p>
+            </li>
+            <li className="grid grid-cols-12 gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">2D Programs</h3>
+              <p className="md:ml-4 col-span-12">TVPaint, ToonBoom Harmony, After Effects, Photoshop, Premier Pro</p>
+            </li>
+            <li className="grid grid-cols-12 gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">Languages</h3>
+              <p className="md:ml-4 col-span-12">Swedish (Native), English (Fluent), Danish (Fluent), French (Basic)</p>
+            </li>
+          </ul>
         </div>
 
         {/* Download Button */}
-        <div className="w-full flex justify-center mt-4">
+        <div className="flex justify-center w-full">
           <DownloadButton
             downloadLink={antonCv}
             text="Download My CV"
@@ -68,7 +142,7 @@ const AboutContact = () => {
         </div>
       </div>
 
-      {/* Image & Bio */}
+      {/* Right Column: Bio Section */}
       <div
         className="
           w-full
@@ -76,61 +150,64 @@ const AboutContact = () => {
           flex flex-col
           items-center
           lg:items-start
-          justify-start
-          py-14
-          px-4
-          lg:px-8
-          lg:pr-8
+          space-y-6
+          md:mt-5
         "
       >
-        {/* Images Section */}
-        <div className="w-full flex justify-center">
-          <div className="relative rounded-full bg-stone-300 w-32 h-32 md:w-48 md:h-48 flex-shrink-0 drop-shadow-lg">
-            <img
-              alt="Anton Skogsberg"
-              src={antonTini}
-              className="w-full h-full object-cover shadow-lg rounded-full" /* Ensure fully rounded image */
-            />
-            {/* Transparent Overlay to Prevent Right-Click */}
-            <div
-              className="absolute inset-0 bg-transparent"
-              onContextMenu={(e) => e.preventDefault()}
-            />
-          </div>
+        {/* Image Section */}
+        <div className="relative rounded-full bg-stone-300 w-36 h-36 md:w-48 md:h-48 flex-shrink-0 ">
+          <img
+            alt="Anton Skogsberg"
+            src={antonTini}
+            className="w-full h-full object-cover shadow-lg rounded-full"
+          />
         </div>
 
-        {/* Description */}
-        <div className="mt-4">
-          <p className="text-justify text-neutral-50 leading-relaxed">Hello and welcome! I’m a 3D &amp; 2D animator educated from The Animation Workshop in Denmark.</p>
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4">
+        {/* Bio Section */}
+
+        <div className="md:mr-26">
+          <p className="text-justify text-neutral-50 leading-relaxed  mx-4 ">Hello and welcome! I’m a 3D &amp; 2D animator educated from The Animation Workshop in Denmark.</p>
+          <p className="text-justify text-neutral-50 leading-relaxed mt-4 mx-4 8">
             I have always loved animation growing up, but it wasn’t until I took a leap of faith by moving to a new country and trying to get into one of the world’s top animation schools that I truly discovered what it takes to succeed in the
             industry.
           </p>
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4">
+          <p className="text-justify text-neutral-50 leading-relaxed mt-4 mx-4 8">
             Over the course of my studies, I have worked on several large collaborative projects, sharpening my skills in industry-standard tools like Maya, Blender, Toon Boom, and TVPaint. I’m always excited to pick up something new and work
-            collaboratively with team members to solve problems. I pick up technical skills quickly, and my experience as a production manager makes me meticulous about schedules and deadlines. My aim is to consistently deliver work on time and at a
-            high standard.
+            collaboratively with team members to solve problems. My experience as a production manager makes me meticulous about schedules and deadlines. My aim is to consistently deliver work on time and at a high standard.
           </p>
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4">
+          <p className="text-justify text-neutral-50 leading-relaxed mt-4 mx-4 8">
             If you’d like to see more of my work or collaborate on a project, feel free to check out{" "}
             <Link
               to="/work"
-              className="font-bold text-customOrange hover:text-cyan-600 transition-transform duration-300"
+              className="font-bold text-cyan-600 hover:text-customOrange transition-transform duration-300"
             >
               my portfolio
             </Link>{" "}
-            and get in touch. I’d love to hear from you!
+            and get in touch. I’d love to hear from you
+            <a
+              href="mailto:atoartworks@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110 inline-flex items-center align-middle"
+              aria-label="Send an email"
+            >
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="w-6 h-6"
+              />
+            </a>
           </p>
+        </div>
 
-          <p className="text-justify text-neutral-50 leading-relaxed mt-4">Kind regards,</p>
-          <div className="flex justify-start">
-            <img
-              src={signature}
-              alt="Anton Skogsberg"
-              className="w-80 h-auto mt-4"
-            />
-          </div>
-          <div className="text-justify text-neutral-50 leading-relaxed mt-4">Anton Skogsberg</div>
+        {/* Signature */}
+        <div className="text-center mt-20 mx-4 md:mr-28 lg:text-left">
+          <p className="text-neutral-50">Kind regards,</p>
+          <img
+            src={signature}
+            alt="Anton Skogsberg"
+            className="w-60 mt-4"
+          />
+          <p className="text-neutral-50 py-5">Anton Skogsberg</p>
         </div>
       </div>
     </div>
