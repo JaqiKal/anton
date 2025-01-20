@@ -149,13 +149,13 @@ const AboutContact = () => {
           lg:w-1/2
           flex flex-col
           items-center
-          lg:items-start
+          lg:items-center 
           space-y-6
           md:mt-5
         "
       >
         {/* Image Section */}
-        <div className="relative rounded-full bg-stone-300 w-36 h-36 md:w-48 md:h-48 flex-shrink-0 ">
+        <div className="relative rounded-full bg-stone-300 w-36 h-36 md:w-48 md:h-48 flex items-center justify-center">
           <img
             alt="Anton Skogsberg"
             src={antonTini}
