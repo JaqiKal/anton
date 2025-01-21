@@ -161,6 +161,11 @@ const AboutContact = () => {
             src={antonTini}
             className="w-full h-full object-cover shadow-lg rounded-full"
           />
+          {/* Transparent Overlay to Prevent Right-Click */}
+          <div
+            className="absolute inset-0 bg-transparent"
+            onContextMenu={(e) => e.preventDefault()} // Disable right-click
+          ></div>
         </div>
 
         {/* Bio Section */}
