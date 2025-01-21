@@ -88,11 +88,9 @@ function Navbar() {
 
                 {/* CONTACT Link with Icon */}
                 <li>
-                  <a
-                    href="mailto:atoartworks@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-transform duration-500 ease-in-out hover:text-customOrange"
+                  <Link
+                    to="/contact"
+                    className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Send an email"
                   >
                     <span className="inline-flex items-center m-0 p-0 text-md">
@@ -102,7 +100,7 @@ function Navbar() {
                       />
                       CONTACT
                     </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -190,23 +188,19 @@ function Navbar() {
           </li>
 
           {/* CONTACT Link with Icon on the Right */}
-          <li>
-            <a
-              href="mailto:atoartworks@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform duration-500 ease-in-out hover:text-customOrange"
-              aria-label="Send an email"
-            >
-              <span className=" block px-4 inline-flex items-center hover:scale-110">
-                Contact
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className="text-md ml-2"
-                />
-              </span>
-            </a>
-          </li>
+          <Link
+            to="/contact"
+            className={`block px-4 ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
+            onClick={handleLinkClick}
+          >
+            <span className="inline-flex items-center hover:scale-110">
+              Contact
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="text-md ml-2"
+              />
+            </span>
+          </Link>
         </ul>
       </div>
     </nav>
