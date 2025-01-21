@@ -6,6 +6,7 @@ import VideoCard from "../components/VideoCard";
 const artworks = [
   {
     id: 1,
+    category: "2D",
     description: "This 2D Animation Showreel is showcasing my skills in everything from cleaned to rough animation. Animations made using TVPaint, Toon Boom Harmony, Photoshop and After Effects.",
     imageUrl: image2DThumbnail,
     vimeoEmbedSrc: "https://player.vimeo.com/video/1031925615?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0",
@@ -14,6 +15,7 @@ const artworks = [
   },
   {
     id: 2,
+    category: "3D",
     description: "My 3D Animation is showcasing my animation skills in a wide variety of rigs, environments & camera setups. Animations made using Autodesk Maya, with assistance from Blender & Unreal Engin.",
     imageUrl: image3DThumbnail,
     vimeoEmbedSrc: "https://player.vimeo.com/video/1031929747?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0",
