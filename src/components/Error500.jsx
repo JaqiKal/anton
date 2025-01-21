@@ -17,11 +17,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faArrowsRotate, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.webp";
-import waves from "../assets/images/error-waves.png";
+import blackWaves from "../assets/images/blackWaves.png";
+import Navbar from "./Navbar";
 
 function Error500() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative">
+    <div className="relative h-screen bg-cyan-800 overflow-hidden">
+      {/* Navbar */}
+      <div className="relative z-50">
+        <Navbar />
+      </div>
       {/* Logo */}
       <div className="absolute top-1 left-4 z-30 p-0">
         <Link to="/">
@@ -29,7 +34,7 @@ function Error500() {
           <img
             src={logo}
             alt="Logo"
-            className="h-20 md:h-28 lg:h-28 xl:h-28 2xl:h-32 w-auto transition-transform duration-300 hover:scale-110"
+            className="h-8 md:h-12 w-auto transition-transform duration-300 hover:scale-110"
             aria-label="Go to homepage via logo"
           />
         </Link>
@@ -38,7 +43,7 @@ function Error500() {
       {/* Background */}
       <div
         style={{
-          backgroundImage: `url(${waves})`,
+          backgroundImage: `url(${blackWaves})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "absolute", // Cover the whole viewport
@@ -52,62 +57,65 @@ function Error500() {
       ></div>
 
       {/* Text */}
-      <div className="relative z-20 p-4 sm:p-6 md:p-8 text-neutral-700 bg-radial-gradient-custom rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 mb-10 mx-4 sm:mx-8 lg:mx-16 xl:mx-32 max-w-2xl">
-        <h2 className="font-customFont text-center text-3xl leading-tight">Well, this is embarrassing...</h2>
+      {/* Content Container */}
+      <div className="flex items-center justify-center h-screen">
+        <div className="relative z-20 p-4 sm:p-6 md:p-8 text-neutral-800 bg-radial-gradient-custom rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 mb-10 mx-4 sm:mx-8 lg:mx-16 xl:mx-32 max-w-2xl">
+          <h2 className="font-customFont text-center text-3xl leading-tight">Well, this is embarrassing...</h2>
 
-        <p className="text-center font-semibold  mt-4 leading-relaxed">Sorry, this is not working properly. We know about this mistake and are working to fix it.</p>
+          <p className="text-center font-semibold  mt-4 leading-relaxed">Sorry, this is not working properly. We know about this mistake and are working to fix it.</p>
 
-        <p className="text-left  mt-6 leading-relaxed">In the meantime, here is what you can do:</p>
+          <p className="text-left  mt-6 leading-relaxed">In the meantime, here is what you can do:</p>
 
-        {/* List */}
-        <ul className="text-left font-normal mt-4 space-y-4">
-          {/* Refresh Page Option */}
-          <li className="flex items-start space-x-2">
-            <FontAwesomeIcon
-              icon={faArrowsRotate}
-              className="text-customGreen mt-1 flex-shrink-0"
-              aria-hidden="true"
-            />
-            <span className="text-neutral-700">Refresh the page; it may help to get unstuck. If not, please...</span>
-          </li>
+          {/* List */}
+          <ul className="text-left font-normal mt-4 space-y-4">
+            {/* Refresh Page Option */}
+            <li className="flex items-start space-x-2">
+              <FontAwesomeIcon
+                icon={faArrowsRotate}
+                className="text-cyan-700 mt-1 flex-shrink-0"
+                aria-hidden="true"
+              />
+              <span className="text-neutral-800">Refresh the page; it may help to get unstuck. If not, please...</span>
+            </li>
 
-          {/* Contact Support Option */}
-          <li className="flex items-start space-x-2">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              className="text-customGreen mt-1 flex-shrink-0"
-              aria-hidden="true"
-            />
-            <span className="text-neutral-700">
-              Send us an email at{" "}
-              <a
-                href="mailto:ato.artworks@gmail.com"
-                className="text-blue-800 hover:underline"
-              >
-                ato.artworks@gmail.com
-              </a>{" "}
-              and tell us what happened.
-            </span>
-          </li>
+            {/* Contact Support Option */}
+            <li className="flex items-start space-x-2">
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="text-cyan-700 mt-1 flex-shrink-0"
+                aria-hidden="true"
+              />
+              <span className="text-neutral-8700">
+                Send us an email at{" "}
+                <a
+                  href="mailto:ato.artworks@gmail.com"
+                  className="text-blue-800 hover:underline"
+                >
+                  ato.artworks@gmail.com
+                </a>{" "}
+                and tell us what happened.
+              </span>
+            </li>
 
-          {/* Return to Homepage Option */}
-          <li className="flex items-start space-x-2">
-            <FontAwesomeIcon
-              icon={faHouse}
-              className="text-customGreen mt-1 flex-shrink-0"
-              aria-hidden="true"
-            />
-            <span className="text-neutral-700">
-              <a
-                href="https://jaqikal.github.io/anton/"
-                className="text-blue-800 hover:underline"
-              >
-                Return to the homepage
-              </a>{" "}
-              to start over.
-            </span>
-          </li>
-        </ul>
+            {/* Return to Homepage Option */}
+            <li className="flex items-start space-x-2">
+              <FontAwesomeIcon
+                icon={faHouse}
+                className="text-cyan-700 mt-1 flex-shrink-0"
+                aria-hidden="true"
+              />
+              <span className="text-neutral-8700">
+                <a
+                  href="https://jaqikal.github.io/anton/"
+                  className="text-blue-800 hover:underline"
+                >
+                  Return to the homepage
+                </a>{" "}
+                to start over.
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -18,11 +18,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./Navbar";
-import waves from "../assets/images/error-waves.png";
+import blackWaves from "../assets/images/blackWaves.png";
 
 function Error404() {
   return (
-    <div className="relative min-h-screen bg-customWhite">
+    <div className="relative h-screen bg-cyan-800 overflow-hidden">
       {/* Navbar */}
       <div className="relative z-50">
         <Navbar />
@@ -30,7 +30,7 @@ function Error404() {
       {/* Background */}
       <div
         style={{
-          backgroundImage: `url(${waves})`,
+          backgroundImage: `url(${blackWaves})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "absolute", // Cover the whole viewport
@@ -43,9 +43,9 @@ function Error404() {
         aria-hidden="true" // Decorative background, not accessible
       ></div>
       {/* Content Container */}
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center h-screen">
         <div className="relative z-10 p-8 max-w-md text-center rounded-3xl bg-radial-gradient-custom bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-lg">
-          <h1 className="text-6xl font-bold text-customGreen">404</h1>
+          <h1 className="text-6xl font-bold text-neutral-800">404</h1>
           <h2 className="mt-4 text-2xl font-semibold text-neutral-800">Page Not Found</h2>
           <p className="mt-2 text-neutral-700">Oops! The page you're looking for doesn't exist.</p>
 
@@ -53,7 +53,7 @@ function Error404() {
           <div className="mt-6 flex flex-col space-y-4">
             <Link
               to="/"
-              className="flex items-center justify-center px-4 py-2 bg-customGreen text-white rounded-md hover:bg-green-700 transition"
+              className="flex items-center justify-center px-4 py-2 bg-cyan-600 text-neutral-200 rounded-md hover:bg-cyan-700 transition"
             >
               <FontAwesomeIcon
                 icon={faHome}
@@ -63,7 +63,7 @@ function Error404() {
             </Link>
             <a
               href="mailto:ato.artworks@gmail.com"
-              className="flex items-center justify-center px-4 py-2 bg-customOrange text-white rounded-md hover:bg-orange-600 transition"
+              className="flex items-center justify-center px-4 py-2 bg-customOrange text-neutral-200 rounded-md hover:bg-orange-600 transition"
             >
               <FontAwesomeIcon
                 icon={faEnvelope}
