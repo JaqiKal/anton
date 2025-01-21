@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/anton/static/css/main.cd07691d.css",
-    "main.js": "/anton/static/js/main.6e0f923e.js",
+    "main.css": "/anton/static/css/main.4cf85a8f.css",
+    "main.js": "/anton/static/js/main.f9e003a6.js",
     "static/js/488.9db3aaa7.chunk.js": "/anton/static/js/488.9db3aaa7.chunk.js",
     "static/media/3DThumbnail_v001.webp": "/anton/static/media/3DThumbnail_v001.50fdc2e1d5572a8f6d6b.webp",
     "static/media/wolf-anton.webp": "/anton/static/media/wolf-anton.79bd5bb60832a44c6ca9.webp",
     "static/media/cv-anton-skogsberg.pdf": "/anton/static/media/cv-anton-skogsberg.39080e577aaab44789ff.pdf",
     "static/media/anton-tini2.webp": "/anton/static/media/anton-tini2.ba57b2f41b3dcc31f346.webp",
     "static/media/2DThumbnail_v001.webp": "/anton/static/media/2DThumbnail_v001.f7708e28dfe808f81472.webp",
+    "static/media/blackWaves.png": "/anton/static/media/blackWaves.e37e215f4d676d509c0b.png",
     "static/media/signature.webp": "/anton/static/media/signature.5ed8f4a85ceeaf82af0b.webp",
-    "static/media/error-waves.png": "/anton/static/media/error-waves.e07c40c361c94116c218.png",
     "static/media/logo.webp": "/anton/static/media/logo.59c305e36a5329facb75.webp",
     "index.html": "/anton/index.html",
-    "main.cd07691d.css.map": "/anton/static/css/main.cd07691d.css.map",
-    "main.6e0f923e.js.map": "/anton/static/js/main.6e0f923e.js.map",
+    "main.4cf85a8f.css.map": "/anton/static/css/main.4cf85a8f.css.map",
+    "main.f9e003a6.js.map": "/anton/static/js/main.f9e003a6.js.map",
     "488.9db3aaa7.chunk.js.map": "/anton/static/js/488.9db3aaa7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd07691d.css",
-    "static/js/main.6e0f923e.js"
+    "static/css/main.4cf85a8f.css",
+    "static/js/main.f9e003a6.js"
   ]
 }
