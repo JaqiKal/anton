@@ -43,12 +43,17 @@ function Contact() {
       <h1 className="sr-only">Contact Page</h1>
       <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:items-start lg:justify-between">
         {/* Right Section: Image (Stacks on top for smaller devices) */}
-        <div className="w-full lg:w-1/2 h-auto lg:h-full">
+        <div className="w-full lg:w-1/2 h-auto lg:h-full relative">
           <img
             src={wolfAnton}
             alt="Cartoon wolf playing a guitar in rock 'n' roll style, drawn by Anton Skogsberg."
             className="w-full h-auto lg:h-full object-cover rounded-lg"
           />
+          {/* Transparent Overlay to Prevent Right-Click */}
+          <div
+            className="absolute inset-0 bg-transparent"
+            onContextMenu={(e) => e.preventDefault()} // Disable right-click
+          ></div>
         </div>
 
         {/* Left Section: Form */}
