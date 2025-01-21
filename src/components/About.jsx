@@ -189,18 +189,14 @@ const AboutContact = () => {
               my portfolio
             </Link>{" "}
             and get in touch. I’d love to hear from you
-            <a
-              href="mailto:atoartworks@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110 inline-flex items-center align-middle"
-              aria-label="Send an email"
-            >
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className="w-6 h-6"
-              />
-            </a>
+            <Link to="/contact">
+              <span className="inline-flex items-center hover:scale-110">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="ml-2 font-bold text-cyan-600 hover:text-customOrange transition-transform duration-300"
+                />
+              </span>
+            </Link>
           </p>
         </div>
 
