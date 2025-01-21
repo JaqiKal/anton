@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import SubmitButton from "./SubmitButton";
-import wolfAnton from "../assets/images/wolf-anton.webp";
+import neptunAnton from "../assets/images/neptunAnton.webp";
 // import SubmitButton from "./SubmitButton";
 
 function Contact() {
@@ -34,6 +34,7 @@ function Contact() {
       );
 
     e.target.reset(); // Clear the form fields after submission
+    e.target.reset(); // Clear the form fields after submission
     setMessage(""); // Clear the message state
   };
 
@@ -42,25 +43,8 @@ function Contact() {
       {/* Screen Reader Only H1 */}
       <h1 className="sr-only">Contact Page</h1>
       <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
-        {/* Right Section: Image (Stacks on top for smaller devices) */}
-        <div className="w-full lg:w-1/2 relative">
-          <div className="h-full flex">
-            <img
-              src={wolfAnton}
-              alt="Cartoon wolf playing a guitar in rock 'n' roll style, drawn by Anton Skogsberg."
-              className="w-full object-cover rounded-lg"
-              style={{ height: "100%" }} // Ensures the image fills the container height
-            />
-          </div>
-          {/* Transparent Overlay to Prevent Right-Click */}
-          <div
-            className="absolute inset-0 bg-transparent"
-            onContextMenu={(e) => e.preventDefault()} // Disable right-click
-          ></div>
-        </div>
-
         {/* Left Section: Form */}
-        <div className="w-full lg:w-1/2 h-full bg-neutral-800 rounded-lg p-8 flex flex-col justify-between">
+        <div className="w-full lg:w-1/2 bg-neutral-800 rounded-lg p-8 flex flex-col justify-between">
           <h2 className="text-3xl font-bold text-cyan-600 mb-6 text-center">Contact Me</h2>
 
           <form
@@ -139,6 +123,20 @@ function Contact() {
             {/* Submit Button */}
             <SubmitButton>Send Message</SubmitButton>
           </form>
+        </div>
+
+        {/* Right Section: Image */}
+        <div className="w-full lg:w-1/2 relative flex items-stretch">
+          <img
+            src={neptunAnton}
+            alt="Cartoon wolf playing a guitar in rock 'n' roll style, drawn by Anton Skogsberg."
+            className="h-full w-auto object-cover rounded-lg"
+          />
+          {/* Transparent Overlay to Prevent Right-Click */}
+          <div
+            className="absolute inset-0 bg-transparent"
+            onContextMenu={(e) => e.preventDefault()} // Disable right-click
+          ></div>
         </div>
       </div>
     </div>
