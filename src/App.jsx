@@ -4,6 +4,7 @@ import Home from "./components/Home"; //TODO: Consider creating barrel file to e
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 import Layout from "./components/Layout";
+import Contact from "./components/Contact";
 import Error403 from "./components/Error403";
 import Error404 from "./components/Error404";
 import Error500 from "./components/Error500";
@@ -35,6 +36,15 @@ const App = () => {
             element={
               <Layout>
                 <About />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/contact"
+            element={
+              <Layout>
+                <Contact />
               </Layout>
             }
           />
