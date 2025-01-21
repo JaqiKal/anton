@@ -100,7 +100,7 @@ const Footer = () => {
               
             "
           >
-            &copy; 2025 Website by JaqiKal
+            &copy; 2025 Anton Skogsberg website by JaqiKal
           </a>
         </div>
       </div>
