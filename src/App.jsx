@@ -66,11 +66,7 @@ const App = () => {
           {/* Catch-All Route for 404 Errors */}
           <Route
             path="*"
-            element={
-              <Layout>
-                <Error404 />
-              </Layout>
-            }
+            element={<Error404 />}
           />
         </Routes>
       </div>
