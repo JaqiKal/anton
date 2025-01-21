@@ -116,7 +116,7 @@ function Contact() {
                 onChange={handleInputChange}
                 maxLength={maxMessageLength}
                 className="mt-2 w-full p-3 bg-gray-700 text-neutral-300 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
-                placeholder="Your Message"
+                placeholder="Hi Anton! I really enjoy your work! I’d love to connect and discuss a project or opportunity."
                 required
               ></textarea>
               {/* Character Counter */}
