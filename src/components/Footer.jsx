@@ -30,6 +30,7 @@ const Footer = () => {
             href="mailto:atoartworks@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Email Ato Artworks"
             className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
           >
             <FontAwesomeIcon
@@ -43,6 +44,7 @@ const Footer = () => {
             href="https://www.instagram.com/atoartworks/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Ato Artworks on Instagram"
             className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
           >
             <FontAwesomeIcon
@@ -56,6 +58,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/anton-skogsberg-35701a24b/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Anton Skogsberg's LinkedIn profile"
             className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
           >
             <FontAwesomeIcon
@@ -83,7 +86,7 @@ const Footer = () => {
             href="https://github.com/JaqiKal"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Link to app creators GitHub profile"
+            aria-label="Link to site creators GitHub profile"
             className="
               text-cyan-600
               font-bold
