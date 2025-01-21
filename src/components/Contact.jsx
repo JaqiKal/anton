@@ -38,17 +38,20 @@ function Contact() {
   };
 
   return (
-    <div className="bg-neutral-900 py-10 px-6 lg:px-16 flex flex-col items-center">
+    <div className="bg-neutral-900 py-10 md:pt-20 px-6 lg:px-16 flex flex-col items-center">
       {/* Screen Reader Only H1 */}
       <h1 className="sr-only">Contact Page</h1>
-      <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:items-start lg:justify-between">
+      <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
         {/* Right Section: Image (Stacks on top for smaller devices) */}
-        <div className="w-full lg:w-1/2 h-auto lg:h-full relative">
-          <img
-            src={wolfAnton}
-            alt="Cartoon wolf playing a guitar in rock 'n' roll style, drawn by Anton Skogsberg."
-            className="w-full h-auto lg:h-full object-cover rounded-lg"
-          />
+        <div className="w-full lg:w-1/2 relative">
+          <div className="h-full flex">
+            <img
+              src={wolfAnton}
+              alt="Cartoon wolf playing a guitar in rock 'n' roll style, drawn by Anton Skogsberg."
+              className="w-full object-cover rounded-lg"
+              style={{ height: "100%" }} // Ensures the image fills the container height
+            />
+          </div>
           {/* Transparent Overlay to Prevent Right-Click */}
           <div
             className="absolute inset-0 bg-transparent"
