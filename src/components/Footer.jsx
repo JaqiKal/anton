@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Email Icon
 import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"; // Social Media Icons
@@ -26,18 +28,12 @@ const Footer = () => {
         {/* Social Media Icons (Always Centered) */}
         <div className="flex space-x-6 lg:space-x-12 sm:mb-0">
           {/* Email Icon */}
-          <a
-            href="mailto:atoartworks@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Email Ato Artworks"
-            className="text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
-          >
+          <Link to="/contact">
             <FontAwesomeIcon
               icon={faEnvelope}
-              className="w-6 h-6"
+              className="w-6 h-6 text-cyan-600 hover:text-customOrange transition-transform duration-300 hover:scale-110"
             />
-          </a>
+          </Link>
 
           {/* Instagram Icon */}
           <a
@@ -96,7 +92,7 @@ const Footer = () => {
               text-xs
               xs:text-customXxs
               xs:mb-1
-              sm:text-customXxs
+              md:text-xs
               
             "
           >
