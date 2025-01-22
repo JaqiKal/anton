@@ -3,7 +3,6 @@ import emailjs from "emailjs-com";
 import SubmitButton from "./SubmitButton";
 import neptunAnton from "../assets/images/neptunAnton.webp";
 // import SubmitButton from "./SubmitButton";
-
 function Contact() {
   const [message, setMessage] = useState("");
   const maxMessageLength = 500;
@@ -34,21 +33,20 @@ function Contact() {
       );
 
     e.target.reset(); // Clear the form fields after submission
-    e.target.reset(); // Clear the form fields after submission
     setMessage(""); // Clear the message state
   };
 
   return (
-    <div className="bg-neutral-900 py-10 md:pt-20 px-6 lg:px-16 flex flex-col  items-center">
+    <div className="bg-neutral-900 py-10 md:pt-20 px-6 lg:px-16 flex flex-col items-center">
       {/* Screen Reader Only H1 */}
       <h1 className="sr-only">Contact Page</h1>
       <div className="bg-linear-gradient-blue rounded-lg w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
         {/* Right Section: Image */}
-        <div className=" w-full lg:w-1/2 relative flex items-stretch">
+        <div className="w-full lg:w-1/2 h-auto xs:h-[180px] sm:h-[220px] iphone12:h-[250px] ipadpro:h-[280px] mediumOne:h-[500px] mediumTwo:h-[500px] md:h-[400px] lg:h-[450px] xl:h-[500px] relative flex items-center justify-center pt-8 lg:pt-12">
           <img
             src={neptunAnton}
             alt="Merman diving, drawn by Anton Skogsberg."
-            className="max-h-[700px] w-full object-contain rounded-lg"
+            className="object-contain max-h-full max-w-full rounded-lg"
           />
         </div>
 
