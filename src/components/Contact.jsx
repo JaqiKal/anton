@@ -39,17 +39,26 @@ function Contact() {
   };
 
   return (
-    <div className="bg-neutral-900 py-10 md:pt-20 px-6 lg:px-16 flex flex-col items-center">
+    <div className="bg-neutral-900 py-10 md:pt-20 px-6 lg:px-16 flex flex-col  items-center">
       {/* Screen Reader Only H1 */}
       <h1 className="sr-only">Contact Page</h1>
-      <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
+      <div className="bg-linear-gradient-blue rounded-lg w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
+        {/* Right Section: Image */}
+        <div className=" w-full lg:w-1/2 relative flex items-stretch">
+          <img
+            src={neptunAnton}
+            alt="Merman diving, drawn by Anton Skogsberg."
+            className="max-h-[700px] w-full object-contain rounded-lg"
+          />
+        </div>
+
         {/* Left Section: Form */}
-        <div className="w-full lg:w-1/2 bg-neutral-800 rounded-lg p-8 flex flex-col justify-between">
-          <h2 className="text-3xl font-bold text-cyan-600 mb-6 text-center">Contact Me</h2>
+        <div className="w-full lg:w-1/2 bg-neutral-800 rounded-lg p-10 lg:p-12 flex flex-col justify-between">
+          <h2 className="text-3xl font-bold xs:pb-6  text-cyan-600 text-center">Contact Me</h2>
 
           <form
             onSubmit={handleSubmit}
-            className="space-y-6 flex flex-col justify-between"
+            className="space-y-3 lg:space-y-6 flex flex-col "
           >
             {/* Full Name Field */}
             <div>
@@ -102,7 +111,7 @@ function Contact() {
                 value={message}
                 onChange={handleInputChange}
                 maxLength={maxMessageLength}
-                className="mt-2 w-full p-3 bg-gray-700 text-neutral-300 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
+                className="mt-2 w-full p-3 lg:p-2 bg-gray-700 text-neutral-300 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
                 placeholder="Hi Anton! I really enjoy your work! I’d love to connect and discuss a project or opportunity."
                 required
               ></textarea>
@@ -123,20 +132,6 @@ function Contact() {
             {/* Submit Button */}
             <SubmitButton>Send Message</SubmitButton>
           </form>
-        </div>
-
-        {/* Right Section: Image */}
-        <div className="w-full lg:w-1/2 relative flex items-stretch">
-          <img
-            src={neptunAnton}
-            alt="Cartoon wolf playing a guitar in rock 'n' roll style, drawn by Anton Skogsberg."
-            className="h-full w-auto object-cover rounded-lg"
-          />
-          {/* Transparent Overlay to Prevent Right-Click */}
-          <div
-            className="absolute inset-0 bg-transparent"
-            onContextMenu={(e) => e.preventDefault()} // Disable right-click
-          ></div>
         </div>
       </div>
     </div>
