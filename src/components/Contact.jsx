@@ -48,6 +48,11 @@ function Contact() {
             alt="Merman diving, drawn by Anton Skogsberg."
             className="object-contain max-h-full max-w-full rounded-lg"
           />
+          {/* Transparent Overlay to Prevent Right-Click */}
+          <div
+            className="absolute inset-0 bg-transparent"
+            onContextMenu={(e) => e.preventDefault()} // Disable right-click
+          ></div>
         </div>
 
         {/* Left Section: Form */}
