@@ -7,12 +7,9 @@ module.exports = {
         xs: { max: "374px" }, // Custom breakpoint for anything below 375px
     },
          
-        backgroundImage: {
-          'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
-          'radial-gradient-custom': 'radial-gradient(circle, var(--gradient-start), var(--gradient-end))',
-        },
-        
+               
       colors: {
+
         customPurple: '#4d3f78',
         customPurpleDark: '#2e2548',
         customGreen: '#17471E', // coolors Pakistan Green, almost tw-green-950 
@@ -24,6 +21,12 @@ module.exports = {
         gradientErrorpageEnd:  '#f57356',
       },
 
+       backgroundImage: {
+        'linear-gradient-blue': 'linear-gradient(to top, #000033,#0b0a29,#161452,#1b1967, #211e7b)',
+          'linear-gradient': 'linear-gradient(to top, #ede0c0, #c42d0b)',
+          'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
+          'radial-gradient-custom': 'radial-gradient(circle, var(--gradient-start), var(--gradient-end))',
+        },
   
       backdropBlur: {
         sm: '4px',
