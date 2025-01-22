@@ -25,8 +25,7 @@ import image3DThumbnail from "../assets/images/3DThumbnail_v001.webp";
 
 const Home = () => {
   const video = {
-    vimeoEmbedSrc: "https://player.vimeo.com/video/1048490910?h=92b741f246&badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=1&loop=1&muted=1&controls=0",
-
+    vimeoEmbedSrc: "https://player.vimeo.com/video/1046889324?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0&autoplay=1&loop=1&muted=1&controls=0",
     title: "Anton Skogsberg - Short Loop Animation Showreel",
     borderColor: "#0a0a0a",
     description: "", // No description needed for Home
