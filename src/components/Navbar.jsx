@@ -90,7 +90,7 @@ function Navbar() {
                 <li>
                   <Link
                     to="/contact"
-                    className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
+                    className={`transition-transform duration-500 ease-in-out ${isActive("/contact") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Send an email"
                   >
                     <span className="inline-flex items-center m-0 p-0 text-md">
@@ -190,7 +190,7 @@ function Navbar() {
           {/* CONTACT Link with Icon on the Right */}
           <Link
             to="/contact"
-            className={`block px-4 ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
+            className={`block px-4 ${isActive("/contact") ? "text-customOrange" : "hover:text-customOrange"}`}
             onClick={handleLinkClick}
           >
             <span className="inline-flex items-center hover:scale-110">
