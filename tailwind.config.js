@@ -4,8 +4,12 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xs: { max: "374px" }, // Custom breakpoint for anything below 375px
-    },
+        'xs': { max: '374px' },  // Custom breakpoint for smaller devices
+        'iphone12': { max: '390px' },  // Custom breakpoint for iPhone 12 Pro
+        'ipadpro': { max: '1024px' },  // Custom breakpoint for iPad Pro
+        'mediumOne': { min: '1024px', max: '1024px' },  // Custom breakpoint for devices in the 1024px to 1279px range
+        'mediumTwo': { min: '1025px', max: '1279px' },  // Custom breakpoint for devices in the 1024px to 1279px range
+      },
          
                
       colors: {
