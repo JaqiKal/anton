@@ -14,7 +14,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import antonTini from "../assets/images/anton-tini2.webp";
+import antonTini from "../assets/images/anton-tini.webp";
 import signature from "../assets/images/signature.webp";
 import antonCv from "../assets/doc/cv-anton-skogsberg.pdf";
 import DownloadButton from "./DownloadButton";
@@ -159,7 +159,8 @@ const AboutContact = () => {
           <img
             alt="Anton Skogsberg"
             src={antonTini}
-            className="w-full h-full object-cover shadow-lg rounded-full"
+            className="w-full h-full object-cover shadow-lg rounded-full bg-"
+            onError={(e) => (e.target.src = "/path/to/fallback-image.jpg")} // Fallback image
           />
           {/* Transparent Overlay to Prevent Right-Click */}
           <div
