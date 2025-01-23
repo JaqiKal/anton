@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import SubmitButton from "./SubmitButton";
 import neptunAnton from "../assets/images/neptunAnton.webp";
+import fallbackNeptun from "../assets/images/fallbackNeptun.webp";
 // import SubmitButton from "./SubmitButton";
 function Contact() {
   const [message, setMessage] = useState("");
@@ -14,6 +15,13 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Input validation check if any of the fields are empty
+    if (!message.trim() || !e.target.from_name.value || !e.target.from_email.value) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Send email using EmailJS
     emailjs
       .sendForm(
         "service_3g3ky6m", // Your EmailJS Service ID
@@ -40,13 +48,14 @@ function Contact() {
     <div className="bg-neutral-900 py-10 md:pt-20 px-6 lg:px-16 flex flex-col items-center">
       {/* Screen Reader Only H1 */}
       <h1 className="sr-only">Contact Page</h1>
-      <div className="bg-linear-gradient-blue rounded-lg w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
+      <div className="bg-linear-gradient-customBlue rounded-lg w-full max-w-5xl flex flex-col lg:flex-row lg:items-stretch lg:justify-between">
         {/* Right Section: Image */}
         <div className="w-full lg:w-1/2 h-auto xs:h-[180px] sm:h-[220px] iphone12:h-[250px] ipadpro:h-[280px] mediumOne:h-[500px] mediumTwo:h-[500px] md:h-[400px] lg:h-[450px] xl:h-[500px] relative flex items-center justify-center pt-8 lg:pt-12">
           <img
             src={neptunAnton}
             alt="Merman diving, drawn by Anton Skogsberg."
             className="object-contain max-h-full max-w-full rounded-lg"
+            onError={(e) => fallbackNeptun} // Fallback image
           />
           {/* Transparent Overlay to Prevent Right-Click */}
           <div
