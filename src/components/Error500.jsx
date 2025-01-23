@@ -59,7 +59,7 @@ function Error500() {
       {/* Text */}
       {/* Content Container */}
       <div className="flex items-center justify-center h-screen">
-        <div className="relative z-20 p-4 sm:p-6 md:p-8 text-neutral-800 bg-radial-gradient-custom rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 mb-10 mx-4 sm:mx-8 lg:mx-16 xl:mx-32 max-w-2xl">
+        <div className="relative z-20 p-4 sm:p-6 md:p-8 text-neutral-800 bg-radial-gradient-customErrpage rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 mb-10 mx-4 sm:mx-8 lg:mx-16 xl:mx-32 max-w-2xl">
           <h2 className="font-customFont text-center text-3xl leading-tight">Well, this is embarrassing...</h2>
 
           <p className="text-center font-semibold  mt-4 leading-relaxed">Sorry, this is not working properly. We know about this mistake and are working to fix it.</p>

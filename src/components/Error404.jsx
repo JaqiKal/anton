@@ -44,7 +44,7 @@ function Error404() {
       ></div>
       {/* Content Container */}
       <div className="flex items-center justify-center h-screen">
-        <div className="relative z-10 p-8 max-w-md text-center rounded-3xl bg-radial-gradient-custom bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-lg">
+        <div className="relative z-10 p-8 max-w-md text-center rounded-3xl bg-radial-gradient-customErrpage bg-opacity-90 backdrop-filter backdrop-blur-sm shadow-lg">
           <h1 className="text-6xl font-bold text-neutral-800">404</h1>
           <h2 className="mt-4 text-2xl font-semibold text-neutral-800">Page Not Found</h2>
           <p className="mt-2 text-neutral-700">Oops! The page you're looking for doesn't exist.</p>
