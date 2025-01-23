@@ -18,6 +18,7 @@ import antonTini from "../assets/images/anton-tini.webp";
 import signature from "../assets/images/signature.webp";
 import antonCv from "../assets/doc/cv-anton-skogsberg.pdf";
 import DownloadButton from "./DownloadButton";
+import fallbackAntontini from "../assets/images/fallbackAntontini.webp";
 
 const AboutContact = () => {
   return (
@@ -155,12 +156,12 @@ const AboutContact = () => {
         "
       >
         {/* Image Section */}
-        <div className="relative rounded-full bg-stone-300 w-36 h-36 md:w-48 md:h-48 flex items-center justify-center">
+        <div className="relative rounded-full border-solid border-2 border-neutral-900 bg-stone-300 w-36 h-36 md:w-48 md:h-48 flex items-center justify-center">
           <img
             alt="Anton Skogsberg"
             src={antonTini}
-            className="w-full h-full object-cover shadow-lg rounded-full bg-"
-            onError={(e) => (e.target.src = "/path/to/fallback-image.jpg")} // Fallback image
+            className="w-full h-full object-fit  rounded-full"
+            onError={(e) => (e.target.src = fallbackAntontini)} // Fallback image
           />
           {/* Transparent Overlay to Prevent Right-Click */}
           <div
