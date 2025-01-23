@@ -14,22 +14,17 @@ module.exports = {
                
       colors: {
 
-        customPurple: '#4d3f78',
-        customPurpleDark: '#2e2548',
+        customPurple: '#4d3f78', // used in Submit btn
+        customPurpleDark: '#2e2548', // used in Submit btn
         customGreen: '#17471E', // coolors Pakistan Green, almost tw-green-950 
         customOrange: '#c42d0b', // coolors Engineering Orange, almost tw-orange-800
-        customOrangeDark: '#a61b07', 
         customWhite: '#f9f5eb', 
-        customOrangeBg:'#efcebf',
-        gradientErrorpageStart:  '#ede0c0',
-        gradientErrorpageEnd:  '#f57356',
+
       },
 
        backgroundImage: {
-        'linear-gradient-blue': 'linear-gradient(to top, #000033,#0b0a29,#161452,#1b1967, #211e7b)',
-          'linear-gradient': 'linear-gradient(to top, #ede0c0, #c42d0b)',
-          'radial-gradient': 'radial-gradient(circle, #ede0c0, #c42d0b)',
-          'radial-gradient-custom': 'radial-gradient(circle, var(--gradient-start), var(--gradient-end))',
+        'linear-gradient-customBlue': 'linear-gradient(to top, #000033,#0b0a29,#161452,#1b1967, #211e7b)', // used in Contact.jsx
+        'radial-gradient-customErrpage': 'radial-gradient(circle, #A9D9E4, #0891b2)', // used in Error pages
         },
   
       backdropBlur: {
@@ -53,13 +48,5 @@ module.exports = {
     },
   },
   plugins: [
-    function({ addBase, theme }) {
-      addBase({
-        ':root': {
-          '--gradient-start': theme('colors.gradientErrorpageStart'),
-          '--gradient-end': theme('colors.gradientErrorpageEnd'),
-        },
-      });
-    },
   ],
 };
