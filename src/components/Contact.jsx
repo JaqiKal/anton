@@ -7,6 +7,8 @@ import fallbackNeptun from "../assets/images/fallbackNeptun.webp";
 function Contact() {
   const [message, setMessage] = useState("");
   const [formErrors, setFormErrors] = useState({}); // To track errors in the form
+  const [successMessage, setSuccessMessage] = useState(""); // To display success message
+  const [failureMessage, setFailureMessage] = useState(""); // To display failure message
   const maxMessageLength = 500;
 
   const handleInputChange = (e) => {
@@ -18,6 +20,8 @@ function Contact() {
 
     // Clear previous errors
     setFormErrors({});
+    setSuccessMessage("");
+    setFailureMessage("");
 
     // Input validation check if any of the fields are empty
     const errors = {};
@@ -42,11 +46,13 @@ function Contact() {
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          alert("Message sent successfully!");
+          setSuccessMessage("Email was sent successfully!"); // Set custom success message
+          setTimeout(() => setSuccessMessage(""), 5000); // Hide success message after 5 seconds
         },
         (error) => {
           console.error("Error sending email:", error.text);
-          alert("Failed to send message. Please try again later.");
+          setFailureMessage("Failed to send email. Please try again later."); // Set custom failure message
+          setTimeout(() => setFailureMessage(""), 5000); // Hide failure message after 5 seconds
         }
       );
 
@@ -159,6 +165,19 @@ function Contact() {
             {/* Submit Button */}
             <SubmitButton>Send Message</SubmitButton>
           </form>
+
+          {/* Success message */}
+          {successMessage && (
+            <div className="text-green-600 text-center mt-4">
+              <p>{successMessage}</p>
+            </div>
+          )}
+          {/* Failure message */}
+          {failureMessage && (
+            <div className="text-red-700 text-center mt-4">
+              <p>{failureMessage}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
