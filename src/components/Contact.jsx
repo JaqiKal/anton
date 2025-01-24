@@ -55,7 +55,7 @@ function Contact() {
             src={neptunAnton}
             alt="Merman diving, drawn by Anton Skogsberg."
             className="object-contain max-h-full max-w-full rounded-lg"
-            onError={(e) => fallbackNeptun} // Fallback image
+            onError={(e) => (e.target.src = fallbackNeptun)} // Fallback image
           />
           {/* Transparent Overlay to Prevent Right-Click */}
           <div
