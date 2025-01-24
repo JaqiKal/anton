@@ -3,9 +3,10 @@ import emailjs from "emailjs-com";
 import SubmitButton from "./SubmitButton";
 import neptunAnton from "../assets/images/neptunAnton.webp";
 import fallbackNeptun from "../assets/images/fallbackNeptun.webp";
-// import SubmitButton from "./SubmitButton";
+
 function Contact() {
   const [message, setMessage] = useState("");
+  const [formErrors, setFormErrors] = useState({}); // To track errors in the form
   const maxMessageLength = 500;
 
   const handleInputChange = (e) => {
@@ -15,9 +16,18 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Clear previous errors
+    setFormErrors({});
+
     // Input validation check if any of the fields are empty
-    if (!message.trim() || !e.target.from_name.value || !e.target.from_email.value) {
-      alert("Please fill in all fields.");
+    const errors = {};
+    if (!message.trim()) errors.message = "Message is required.";
+    if (!e.target.from_name.value) errors.from_name = "Name is required.";
+    if (!e.target.from_email.value) errors.from_email = "Email is required.";
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors); // Set errors if any field is missing
+
       return;
     }
 
@@ -86,8 +96,8 @@ function Contact() {
                 name="from_name"
                 className="mt-2 w-full p-3 bg-gray-700 text-neutral-300 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
                 placeholder="Your Full Name"
-                required
               />
+              {formErrors.from_name && <p className="text-red-700 text-sm mt-2 ml-2">{formErrors.from_name}</p>}
             </div>
 
             {/* Email Field */}
@@ -104,8 +114,8 @@ function Contact() {
                 name="from_email"
                 className="mt-2 w-full p-3 bg-gray-700 text-neutral-300 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
                 placeholder="Your Email"
-                required
               />
+              {formErrors.from_email && <p className="text-red-700 text-sm mt-2 ml-2">{formErrors.from_email}</p>}
             </div>
 
             {/* Message Field */}
@@ -125,22 +135,27 @@ function Contact() {
                 maxLength={maxMessageLength}
                 className="mt-2 w-full p-3 lg:p-2 bg-gray-700 text-neutral-300 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
                 placeholder="Hi Anton! I really enjoy your work! I’d love to connect and discuss a project or opportunity."
-                required
               ></textarea>
-              {/* Character Counter */}
-              <div className="ml-2">
-                <p
-                  className={`text-sm ${
-                    message.length > maxMessageLength - 30
-                      ? "text-red-800" // Red color when 20 or fewer characters are remaining
-                      : " text-cyan-400" // Default color
-                  }`}
-                >
-                  {message.length}/{maxMessageLength}
-                </p>
+
+              {/* Error and Character Counter in the Same Row */}
+              <div className="flex flex-col xs-small:flex-row justify-between items-start xs-small:items-center">
+                {/* Error Message */}
+                {formErrors.message && <p className="text-red-700 text-sm ml-2">{formErrors.message}</p>}
+
+                {/* Character Counter */}
+                <div className="ml-2 xs-small:ml-0">
+                  <p
+                    className={`text-sm mt-1 ${
+                      message.length > maxMessageLength - 30
+                        ? "text-red-800" // Red color when < 20 characters are remaining
+                        : " text-cyan-400"
+                    }`}
+                  >
+                    {message.length}/{maxMessageLength}
+                  </p>
+                </div>
               </div>
             </div>
-
             {/* Submit Button */}
             <SubmitButton>Send Message</SubmitButton>
           </form>
