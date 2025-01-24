@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'xxs' : { max: '301px' },  // Custom breakpoint for extra small devices, used in Contact.jsx
         'xs': { max: '374px' },  // Custom breakpoint for smaller devices
         'iphone12': { max: '390px' },  // Custom breakpoint for iPhone 12 Pro
         'ipadpro': { max: '1024px' },  // Custom breakpoint for iPad Pro
