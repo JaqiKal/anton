@@ -138,14 +138,14 @@ function Contact() {
               ></textarea>
 
               {/* Error and Character Counter in the Same Row */}
-              <div className="flex flex-col xs-small:flex-row justify-between items-start xs-small:items-center">
+              <div className="flex xxs:flex-col xxs:flex-row justify-between items-start xxs:items-start">
                 {/* Error Message */}
                 {formErrors.message && <p className="text-red-700 text-sm ml-2">{formErrors.message}</p>}
 
                 {/* Character Counter */}
-                <div className="ml-2 xs-small:ml-0">
+                <div className="ml-2 xxs:ml-0">
                   <p
-                    className={`text-sm mt-1 ${
+                    className={`text-sm  mr-2 xxs:ml-2 ${
                       message.length > maxMessageLength - 30
                         ? "text-red-800" // Red color when < 20 characters are remaining
                         : " text-cyan-400"
