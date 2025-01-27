@@ -1,74 +1,124 @@
-# Anton
+# Anton - Portfolio Website
 
-- komihåg att noter minimum supported viewport width (e.g., 217px).
+![GitHub contributors](https://img.shields.io/github/contributors/JaqiKal/anton?color=blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/JaqiKal/anton?color=brightgreen)
+![GitHub language count](https://img.shields.io/github/languages/count/JaqiKal/anton?color=orange)
+![GitHub license](https://img.shields.io/github/license/JaqiKal/anton?color=yellow)
+![GitHub repo size](https://img.shields.io/github/repo-size/JaqiKal/anton?color=black)
 
-## Getting Started with Create React App
+*Anton* is a personal portfolio website, showcasing 2D and 3D animation works. The website highlights his professional achievements, animation skills, and creative projects, while allowing potential clients or collaborators to learn more about him and get in touch.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Content
 
-### Available Scripts
+- [Overview](#overview)
+- [Core Features](#core-features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Design Details](#design-details)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [License](#license)
 
-In the project directory, you can run:
+## Overview
 
-#### `npm start`
+*Anton* is designed to display Anton Skogsberg's professional background in animation, including both 2D and 3D portfolios. The website provides information on his work experience, skills, and the software he uses, along with a contact form for potential inquiries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Core Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Home Page**:
+   - Features a video demonstrating a sample of Anton's animation skills.
+   - The video plays in a continuous loop, without any video controls, and it auto-starts. It stops when you navigate away from it.
 
-#### `npm test`
+2. **Gallery (Showreel) Page**:
+   - Showcases Anton's animation works, divided into 2D and 3D categories.
+   - Embedded Vimeo videos provide a direct view of his animation showreels.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Resume Page**:
+   - Displays a biography, resume, and a downloadable CV button.
+   - Features a professional background image of Anton.
 
-#### `npm run build`
+4. **Contact Form**:
+   - A contact form using emailJS to send inquiries directly to Anton's email.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. **Responsive Design**:
+   - Fully optimized for both desktop and mobile devices, ensuring a smooth experience across all screen sizes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. **Social Media Links**:
+   - Includes links to Anton’s social media profiles, such as LinkedIn and Instagram.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
 
-#### `npm run eject`
+- **Frontend**:  
+  - React, Tailwind CSS
+  
+- **Backend**:  
+  - EmailJS (for handling contact form submissions)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Deployment**:  
+  - GitHub Pages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To set up the project locally, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Clone the Repository:
 
-### Learn More
+```bash
+git clone https://github.com/JaqiKal/anton.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Navigate to the Project Directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd anton
+```
 
-#### Code Splitting
+-Install Dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ ```bash
+ npm install
+```
 
-#### Analyzing the Bundle Size
+- Run the Development Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-#### Making a Progressive Web App
+- Open the app in your browser at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+http://localhost:3000
+```
 
-#### Advanced Configuration
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The website features a detailed view of Anton’s animation work, along with an easy-to-navigate layout. Users can explore his 2D and 3D showreels, read about his background, or contact him directly.
 
-#### Deployment
+## Design Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- A minimalistic design focused on showcasing visual content.
+- Use of modern animations and transitions to enhance the user experience.
+- Custom-tailored color scheme for consistency with Anton’s personal brand.
 
-#### `npm run build` fails to minify
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The website is deployed via GitHub Pages. Every time a change is pushed to the main branch, the website is automatically updated.
+
+## Credits
+
+### Code Used
+
+- Submit button design is inspired and amended from [Astitva2009](https://codepen.io/astitva2009/pen/ExQeNxb)
+- Download button design is inspired and amended from [Dhanish](https://codepen.io/dhanishgajjar/pen/NgQqVj)
+- Icons are sourced from [Fornawesome](https://fontawesome.com/)
+
+### Acknowledgement
+
+- Website built by [JaqiKa](https://github.com/JaqiKal).
+- We would like to give special thanks to the tutorials, courses, and communities that provided invaluable guidance and support throughout the development of this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/JaqiKal/anton/blob/main/LICENSE) file for details.
