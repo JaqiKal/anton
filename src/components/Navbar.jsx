@@ -72,8 +72,8 @@ function Navbar() {
                 {/* RESUME Link with Icon */}
                 <li>
                   <Link
-                    to="/about"
-                    className={`transition-transform duration-500 ease-in-out ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
+                    to="/resume"
+                    className={`transition-transform duration-500 ease-in-out ${isActive("/resume") ? "text-customOrange" : "hover:text-customOrange"}`}
                     aria-label="Resume navigation link"
                   >
                     <span className="inline-flex items-center hover:scale-110">
@@ -173,8 +173,8 @@ function Navbar() {
           {/* RESUME Link with Icon on the Right */}
           <li>
             <Link
-              to="/about"
-              className={`block px-4 ${isActive("/about") ? "text-customOrange" : "hover:text-customOrange"}`}
+              to="/resume"
+              className={`block px-4 ${isActive("/resume") ? "text-customOrange" : "hover:text-customOrange"}`}
               onClick={handleLinkClick}
             >
               <span className="inline-flex items-center hover:scale-110">
