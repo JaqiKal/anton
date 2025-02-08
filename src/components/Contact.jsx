@@ -36,25 +36,18 @@ function Contact() {
     }
 
     // Send email using EmailJS
-    emailjs
-      .sendForm(
-        "service_3g3ky6m", // Your EmailJS Service ID
-        "template_6ggjajn", // Your EmailJS Template ID
-        e.target, // The form element
-        "NZDAkGn4zgTuc0KAl" // Your EmailJS User ID (Public Key)
-      )
-      .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
-          setSuccessMessage("Email was sent successfully!"); // Set custom success message
-          setTimeout(() => setSuccessMessage(""), 5000); // Hide success message after 5 seconds
-        },
-        (error) => {
-          console.error("Error sending email:", error.text);
-          setFailureMessage("Failed to send email. Please try again later."); // Set custom failure message
-          setTimeout(() => setFailureMessage(""), 5000); // Hide failure message after 5 seconds
-        }
-      );
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
+      (result) => {
+        console.log("Email sent successfully:", result.text);
+        setSuccessMessage("Email was sent successfully!"); // Set custom success message
+        setTimeout(() => setSuccessMessage(""), 5000); // Hide success message after 5 seconds
+      },
+      (error) => {
+        console.error("Error sending email:", error.text);
+        setFailureMessage("Failed to send email. Please try again later."); // Set custom failure message
+        setTimeout(() => setFailureMessage(""), 5000); // Hide failure message after 5 seconds
+      }
+    );
 
     e.target.reset(); // Clear the form fields after submission
     setMessage(""); // Clear the message state
