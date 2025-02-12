@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import SubmitButton from "./SubmitButton";
 import neptunAnton from "../assets/images/neptunAnton.webp";
 import fallbackNeptun from "../assets/images/fallbackNeptun.webp";
+import emailValidator from "email-validator";
 
 function Contact() {
   const [message, setMessage] = useState("");
@@ -15,8 +16,44 @@ function Contact() {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    // Async function to handle form submission
     e.preventDefault();
+
+    // Extract form values
+    const email = e.target.from_email.value.trim();
+
+    // Validate Email Format
+    if (!emailValidator.validate(email)) {
+      setFormErrors({ from_email: "Please enter a valid email address." });
+      return;
+    }
+
+    // Extract & Check Email Domain
+    const emailParts = email.split("@");
+    const domain = emailParts[1]?.toLowerCase();
+
+    // Always Allow Major Email Providers
+    const commonProviders = ["gmail.com", "outlook.com", "hotmail.com", "yahoo.com", "icloud.com", "protonmail.com"];
+    if (commonProviders.includes(domain)) {
+      console.log(`✅ ${email} is from a known provider.`);
+    } else {
+      try {
+        // Fetch Valid Email Providers from GitHub
+        const response = await fetch("https://raw.githubusercontent.com/disposable-email-domains/free-email-domains/master/free.txt");
+        const validDomains = await response.text();
+        const domainList = validDomains.split("\n").map((d) => d.trim().toLowerCase()); // Normalize list to lowercase
+
+        if (!domainList.includes(domain)) {
+          setFormErrors({
+            from_email: "This email provider is not recognized. Please check your email domain.",
+          });
+          return;
+        }
+      } catch (error) {
+        console.error("⚠️ Failed to fetch email provider list. Assuming valid domain.", error);
+      }
+    }
 
     // Store environment variables in constants before calling emailjs.sendForm()
     const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -35,7 +72,7 @@ function Contact() {
       return;
     }
 
-    // Clear previous errors
+    // Clear errors & send email
     setFormErrors({});
     setSuccessMessage("");
     setFailureMessage("");
