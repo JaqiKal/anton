@@ -18,6 +18,23 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Store environment variables in constants before calling emailjs.sendForm()
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    // Log them to check if they exist
+    console.log("Service ID:", serviceID);
+    console.log("Template ID:", templateID);
+    console.log("Public Key:", publicKey);
+
+    // Check if environment variables are missing
+    if (!serviceID || !templateID || !publicKey) {
+      console.error("❌ Missing EmailJS environment variables. Make sure .env.local is correctly set.");
+      setFailureMessage("Error: Email service is not configured properly.");
+      return;
+    }
+
     // Clear previous errors
     setFormErrors({});
     setSuccessMessage("");
@@ -36,7 +53,7 @@ function Contact() {
     }
 
     // Send email using EmailJS
-    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, e.target, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
+    emailjs.sendForm(serviceID, templateID, e.target, publicKey).then(
       (result) => {
         console.log("Email sent successfully:", result.text);
         setSuccessMessage("Email was sent successfully!"); // Set custom success message
