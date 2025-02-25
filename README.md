@@ -1,5 +1,8 @@
 # Anton - Portfolio Website
 
+**Live site:** [www.antonskogsberg.com](https://www.antonskogsberg.com)
+
+
 ![GitHub contributors](https://img.shields.io/github/contributors/JaqiKal/anton?color=blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/JaqiKal/anton?color=brightgreen)
 ![GitHub language count](https://img.shields.io/github/languages/count/JaqiKal/anton?color=orange)
@@ -17,6 +20,7 @@
 - [Design Details](#design-details)
 - [Usage](#usage)
 - [Deployment](#deployment)
+- [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
 
@@ -105,6 +109,10 @@ The website features a detailed view of Anton’s animation work, along with an 
 ## Deployment
 
 The website is deployed via GitHub Pages. Every time a change is pushed to the main branch, the website is automatically updated.
+
+## Contributing  
+This project is a personal portfolio and is **not open for contributions**.  
+If you have any inquiries, please contact Anton directly via the website.
 
 ## Credits
 
