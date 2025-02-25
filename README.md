@@ -11,6 +11,8 @@
 
 *Anton* is a personal portfolio website, showcasing 2D and 3D animation works. The website highlights his professional achievements, animation skills, and creative projects, while allowing potential clients or collaborators to learn more about him and get in touch.
 
+![x](https://raw.githubusercontent.com/JaqiKal/anton/refs/heads/main/src/assets/images/amiresponsive.webp)
+
 ## Content
 
 - [Overview](#overview)
