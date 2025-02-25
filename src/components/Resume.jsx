@@ -57,37 +57,37 @@ const Resume = () => {
               <h3 className="col-span-12 font-bold text-lg">Arcadia - Bachelor Project Animation</h3>
               <p className="col-span-12 text-md md:hidden">(Jan. 2025 - Present)</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Director, Storyboarder, Production Manager, Animator</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Jan. 2025 - Present)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">Jan 2025 - Present</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
-              <h3 className="col-span-12 font-bold text-lg">Doppelganger - Bachelor Project Animation</h3>
+              <h3 className="col-span-12 font-bold text-lg">Doppelgänger - Bachelor Project Animation</h3>
               <p className="col-span-12 text-md md:hidden">(Jan. 2025 - Present)</p>
               <p className="md:ml-4   md:col-span-8">Animator, Technical Animator</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Jan. 2025 - Present)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">Jan 2025 - Present</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">Something Soup - Animated Web Series</h3>
               <p className="col-span-12 text-md md:hidden">(2018 - Present)</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Animator, Clean-Up, Color, Production Manager</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(2018 - Present)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">2018 - Present</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">GLITCH Gathering - Animated Commercial</h3>
-              <p className="col-span-12 text-md md:hidden">(Spring 2024)</p>
+              <p className="col-span-12 text-md md:hidden">Spring 2024</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Animator, Technical Animator, Production Manager</p>
-              <p className="col-span-12 md:col-span-4 text-sm  text-right hidden md:block">(Spring 2024)</p>
+              <p className="col-span-12 md:col-span-4 text-sm  text-right hidden md:block">Spring 2024</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">FISK! Animated Short Film Production</h3>
-              <p className="col-span-12 text-md  md:hidden">(Spring 2023)</p>
+              <p className="col-span-12 text-md  md:hidden">Spring 2023</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Animator, Production Manager</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Spring 2023)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">Spring 2023</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">La Chambre Du General - Bachelor Project Animation</h3>
-              <p className="col-span-12 text-md  md:hidden">(Spring 2021)</p>
+              <p className="col-span-12 text-md  md:hidden">Spring 2021</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Clean-Up, Color</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Spring 2021)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">Spring 2021</p>
             </li>
           </ul>
 
@@ -96,21 +96,21 @@ const Resume = () => {
           <ul className="mt-4 space-y-6 text-neutral-800 ">
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">Bachelor in Animation - The Animation Workshop (VIA University College)</h3>
-              <p className="col-span-12 text-md  md:hidden">(2022 - Present)</p>
-              <p className="md:ml-4 col-span-12 md:col-span-8">Bachelor in Animation Education</p>
-              <p className="col-span-12 md:col-span-4 text-sm  text-right hidden md:block">(2022 - Present)</p>
+              <p className="col-span-12 text-md  md:hidden">2022 - Present</p>
+              <p className="md:ml-4 col-span-12 md:col-span-8">Bachelor in Animation Education - 3.5 yr</p>
+              <p className="col-span-12 md:col-span-4 text-sm  text-right hidden md:block">2022 - Present</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">The Drawing Academy - The Animation Workshop (VIA University College)</h3>
-              <p className="col-span-12 text-md  md:hidden">(Fall 2015)</p>
+              <p className="col-span-12 text-md  md:hidden">Fall 2015</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Classical Drawing Education Course</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(Fall 2015)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">Fall 2015</p>
             </li>
             <li className="grid grid-cols-1 md:grid-cols-12 gap-y-2 md:gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">IT & Programming High School - NTI Gymnasiet Södertörn</h3>
-              <p className="col-span-12 text-md  md:hidden">(2012 - 2015)</p>
+              <p className="col-span-12 text-md  md:hidden">2012 - 2015</p>
               <p className="md:ml-4 col-span-12 md:col-span-8">Bachelor preparatory program in Mathematics, Physics & Programming</p>
-              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">(2012 - 2015)</p>
+              <p className="col-span-12 md:col-span-4 text-sm text-right hidden md:block">2012 - 2015</p>
             </li>
           </ul>
 
@@ -128,6 +128,10 @@ const Resume = () => {
             <li className="grid grid-cols-12 gap-1 items-start">
               <h3 className="col-span-12 font-bold text-lg">Languages</h3>
               <p className="md:ml-4 col-span-12">Swedish (Native), English (Fluent), Danish (Fluent), French (Basic)</p>
+            </li>
+            <li className="grid grid-cols-12 gap-1 items-start">
+              <h3 className="col-span-12 font-bold text-lg">Interests & Hobbies</h3>
+              <p className="md:ml-4 col-span-12">Video Games, Baking, Fishkeeping, 80's enthusiast</p>
             </li>
           </ul>
         </div>
