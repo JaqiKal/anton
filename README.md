@@ -1,7 +1,8 @@
 # Anton - Portfolio Website
 
-**Live site:** [www.antonskogsberg.com](https://www.antonskogsberg.com)
-
+**Live sites:**
+- GitHub Pages (project version): https://jaqikal.github.io/anton/
+- Production site (maintained by client): https://www.antonskogsberg.com
 
 ![GitHub contributors](https://img.shields.io/github/contributors/JaqiKal/anton?color=blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/JaqiKal/anton?color=brightgreen)
@@ -110,7 +111,15 @@ The website features a detailed view of Anton’s animation work, along with an 
 
 ## Deployment
 
-The website is deployed via GitHub Pages. Every time a change is pushed to the main branch, the website is automatically updated.
+The project version is hosted on GitHub Pages.
+The production domain is maintained independently by the client.
+
+### Domain configuration
+
+The project was previously connected to a custom domain.
+The custom domain has been intentionally removed, and the site now uses the default GitHub Pages URL.
+
+This change reflects a decoupling of hosting, as the client chose to continue development independently.
 
 ## Contributing  
 This project is a personal portfolio and is **not open for contributions**.  
